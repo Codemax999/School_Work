@@ -1,0 +1,6 @@
+c:\users\cody maxwell\documents\visual studio 2015\Projects\Maxwell_Cody_RestaurantCalc\Maxwell_Cody_RestaurantCalc\bin\Debug\Maxwell_Cody_RestaurantCalc.exe.config
+c:\users\cody maxwell\documents\visual studio 2015\Projects\Maxwell_Cody_RestaurantCalc\Maxwell_Cody_RestaurantCalc\bin\Debug\Maxwell_Cody_RestaurantCalc.exe
+c:\users\cody maxwell\documents\visual studio 2015\Projects\Maxwell_Cody_RestaurantCalc\Maxwell_Cody_RestaurantCalc\bin\Debug\Maxwell_Cody_RestaurantCalc.pdb
+c:\users\cody maxwell\documents\visual studio 2015\Projects\Maxwell_Cody_RestaurantCalc\Maxwell_Cody_RestaurantCalc\obj\Debug\Maxwell_Cody_RestaurantCalc.exe
+c:\users\cody maxwell\documents\visual studio 2015\Projects\Maxwell_Cody_RestaurantCalc\Maxwell_Cody_RestaurantCalc\obj\Debug\Maxwell_Cody_RestaurantCalc.pdb
+C:\Users\Cody Maxwell\Documents\Visual Studio 2015\Projects\Maxwell_Cody_RestaurantCalc\Maxwell_Cody_RestaurantCalc\obj\Debug\Maxwell_Cody_RestaurantCalc.csprojResolveAssemblyReference.cache

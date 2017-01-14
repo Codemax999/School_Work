@@ -1,0 +1,6 @@
+c:\users\cody maxwell\documents\visual studio 2015\Projects\Maxwell_Cody_Conditionals\Maxwell_Cody_Conditionals\bin\Debug\Maxwell_Cody_Conditionals.exe.config
+c:\users\cody maxwell\documents\visual studio 2015\Projects\Maxwell_Cody_Conditionals\Maxwell_Cody_Conditionals\bin\Debug\Maxwell_Cody_Conditionals.exe
+c:\users\cody maxwell\documents\visual studio 2015\Projects\Maxwell_Cody_Conditionals\Maxwell_Cody_Conditionals\bin\Debug\Maxwell_Cody_Conditionals.pdb
+c:\users\cody maxwell\documents\visual studio 2015\Projects\Maxwell_Cody_Conditionals\Maxwell_Cody_Conditionals\obj\Debug\Maxwell_Cody_Conditionals.csprojResolveAssemblyReference.cache
+c:\users\cody maxwell\documents\visual studio 2015\Projects\Maxwell_Cody_Conditionals\Maxwell_Cody_Conditionals\obj\Debug\Maxwell_Cody_Conditionals.exe
+c:\users\cody maxwell\documents\visual studio 2015\Projects\Maxwell_Cody_Conditionals\Maxwell_Cody_Conditionals\obj\Debug\Maxwell_Cody_Conditionals.pdb

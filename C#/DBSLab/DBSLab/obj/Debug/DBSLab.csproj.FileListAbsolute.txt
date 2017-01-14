@@ -1,0 +1,7 @@
+c:\users\cody maxwell\documents\visual studio 2015\Projects\DBSLab\DBSLab\bin\Debug\DBSLab.exe.config
+C:\Users\Cody Maxwell\Documents\Visual Studio 2015\Projects\DBSLab\DBSLab\bin\Debug\DBSLab.exe
+C:\Users\Cody Maxwell\Documents\Visual Studio 2015\Projects\DBSLab\DBSLab\bin\Debug\DBSLab.pdb
+C:\Users\Cody Maxwell\Documents\Visual Studio 2015\Projects\DBSLab\DBSLab\bin\Debug\MySql.Data.dll
+C:\Users\Cody Maxwell\Documents\Visual Studio 2015\Projects\DBSLab\DBSLab\obj\Debug\DBSLab.csprojResolveAssemblyReference.cache
+C:\Users\Cody Maxwell\Documents\Visual Studio 2015\Projects\DBSLab\DBSLab\obj\Debug\DBSLab.exe
+C:\Users\Cody Maxwell\Documents\Visual Studio 2015\Projects\DBSLab\DBSLab\obj\Debug\DBSLab.pdb

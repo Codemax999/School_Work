@@ -1,0 +1,6 @@
+C:\Users\Cody Maxwell\Documents\Visual Studio 2015\Projects\CE_Debugging\Lab4\bin\Debug\LectureProject.exe.config
+C:\Users\Cody Maxwell\Documents\Visual Studio 2015\Projects\CE_Debugging\Lab4\obj\Debug\LectureProject.csprojResolveAssemblyReference.cache
+C:\Users\Cody Maxwell\Documents\Visual Studio 2015\Projects\CE_Debugging\Lab4\bin\Debug\LectureProject.exe
+C:\Users\Cody Maxwell\Documents\Visual Studio 2015\Projects\CE_Debugging\Lab4\bin\Debug\LectureProject.pdb
+C:\Users\Cody Maxwell\Documents\Visual Studio 2015\Projects\CE_Debugging\Lab4\obj\Debug\LectureProject.exe
+C:\Users\Cody Maxwell\Documents\Visual Studio 2015\Projects\CE_Debugging\Lab4\obj\Debug\LectureProject.pdb

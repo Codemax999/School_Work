@@ -1,0 +1,6 @@
+c:\users\cody maxwell\documents\visual studio 2015\Projects\Maxwell_Cody_BigBlueFish\Maxwell_Cody_BigBlueFish\bin\Debug\Maxwell_Cody_BigBlueFish.exe.config
+c:\users\cody maxwell\documents\visual studio 2015\Projects\Maxwell_Cody_BigBlueFish\Maxwell_Cody_BigBlueFish\bin\Debug\Maxwell_Cody_BigBlueFish.exe
+c:\users\cody maxwell\documents\visual studio 2015\Projects\Maxwell_Cody_BigBlueFish\Maxwell_Cody_BigBlueFish\bin\Debug\Maxwell_Cody_BigBlueFish.pdb
+c:\users\cody maxwell\documents\visual studio 2015\Projects\Maxwell_Cody_BigBlueFish\Maxwell_Cody_BigBlueFish\obj\Debug\Maxwell_Cody_BigBlueFish.csprojResolveAssemblyReference.cache
+c:\users\cody maxwell\documents\visual studio 2015\Projects\Maxwell_Cody_BigBlueFish\Maxwell_Cody_BigBlueFish\obj\Debug\Maxwell_Cody_BigBlueFish.exe
+c:\users\cody maxwell\documents\visual studio 2015\Projects\Maxwell_Cody_BigBlueFish\Maxwell_Cody_BigBlueFish\obj\Debug\Maxwell_Cody_BigBlueFish.pdb

@@ -1,0 +1,6 @@
+c:\users\cody maxwell\documents\visual studio 2015\Projects\DB2\DB2\bin\Debug\DB2.exe.config
+c:\users\cody maxwell\documents\visual studio 2015\Projects\DB2\DB2\bin\Debug\DB2.exe
+c:\users\cody maxwell\documents\visual studio 2015\Projects\DB2\DB2\bin\Debug\DB2.pdb
+c:\users\cody maxwell\documents\visual studio 2015\Projects\DB2\DB2\bin\Debug\MySql.Data.dll
+c:\users\cody maxwell\documents\visual studio 2015\Projects\DB2\DB2\obj\Debug\DB2.exe
+c:\users\cody maxwell\documents\visual studio 2015\Projects\DB2\DB2\obj\Debug\DB2.pdb

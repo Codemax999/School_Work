@@ -1,0 +1,6 @@
+c:\users\cody maxwell\documents\visual studio 2015\Projects\Maxwell_Cody_CustomClass\Maxwell_Cody_CustomClass\bin\Debug\Maxwell_Cody_CustomClass.exe.config
+c:\users\cody maxwell\documents\visual studio 2015\Projects\Maxwell_Cody_CustomClass\Maxwell_Cody_CustomClass\obj\Debug\Maxwell_Cody_CustomClass.csprojResolveAssemblyReference.cache
+c:\users\cody maxwell\documents\visual studio 2015\Projects\Maxwell_Cody_CustomClass\Maxwell_Cody_CustomClass\bin\Debug\Maxwell_Cody_CustomClass.exe
+c:\users\cody maxwell\documents\visual studio 2015\Projects\Maxwell_Cody_CustomClass\Maxwell_Cody_CustomClass\bin\Debug\Maxwell_Cody_CustomClass.pdb
+c:\users\cody maxwell\documents\visual studio 2015\Projects\Maxwell_Cody_CustomClass\Maxwell_Cody_CustomClass\obj\Debug\Maxwell_Cody_CustomClass.exe
+c:\users\cody maxwell\documents\visual studio 2015\Projects\Maxwell_Cody_CustomClass\Maxwell_Cody_CustomClass\obj\Debug\Maxwell_Cody_CustomClass.pdb

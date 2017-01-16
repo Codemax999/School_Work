@@ -3,25 +3,25 @@
 // --- PROMPTS ---
 
 //prompt user for pet
-let animal = prompt('Enter an animal');
+const animal = prompt('Enter an animal');
 
 //prompt user place
-let place = prompt('Enter a type of place');
+const place = prompt('Enter a type of place');
 
 //prompt user for celebrity
-let celebrity = prompt('Enter a celebrity');
+const celebrity = prompt('Enter a celebrity');
 
 //prompt user for facial expression
-let expression = prompt('Enter a facial expression');
+const expression = prompt('Enter a facial expression');
 
 //prompt user for days 
-let days = prompt('Enter a random amount of days');
+const days = prompt('Enter a random amount of days');
 
 //prompt user for fans
-let fans = prompt('Enter the number of fans your celebrity runs into');
+const fans = prompt('Enter the number of fans your celebrity runs into');
 
 //prompt user for cost
-let cost = prompt('Enter a random amount of money');
+const cost = prompt('Enter a random amount of money');
 
 
 // --- ARRAYS ---

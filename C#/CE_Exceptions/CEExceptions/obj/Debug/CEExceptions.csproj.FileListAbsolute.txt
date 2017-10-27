@@ -1,6 +1,0 @@
-C:\Users\Cody Maxwell\Documents\Visual Studio 2015\Projects\CE_Exceptions\CEExceptions\bin\Debug\CEExceptions.exe.config
-C:\Users\Cody Maxwell\Documents\Visual Studio 2015\Projects\CE_Exceptions\CEExceptions\bin\Debug\CEExceptions.exe
-C:\Users\Cody Maxwell\Documents\Visual Studio 2015\Projects\CE_Exceptions\CEExceptions\bin\Debug\CEExceptions.pdb
-C:\Users\Cody Maxwell\Documents\Visual Studio 2015\Projects\CE_Exceptions\CEExceptions\obj\Debug\CEExceptions.csprojResolveAssemblyReference.cache
-C:\Users\Cody Maxwell\Documents\Visual Studio 2015\Projects\CE_Exceptions\CEExceptions\obj\Debug\CEExceptions.exe
-C:\Users\Cody Maxwell\Documents\Visual Studio 2015\Projects\CE_Exceptions\CEExceptions\obj\Debug\CEExceptions.pdb

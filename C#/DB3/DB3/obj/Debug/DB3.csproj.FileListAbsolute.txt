@@ -1,6 +1,0 @@
-c:\users\cody maxwell\documents\visual studio 2015\Projects\DB3\DB3\bin\Debug\DB3.exe.config
-c:\users\cody maxwell\documents\visual studio 2015\Projects\DB3\DB3\bin\Debug\DB3.exe
-c:\users\cody maxwell\documents\visual studio 2015\Projects\DB3\DB3\bin\Debug\DB3.pdb
-c:\users\cody maxwell\documents\visual studio 2015\Projects\DB3\DB3\bin\Debug\MySql.Data.dll
-c:\users\cody maxwell\documents\visual studio 2015\Projects\DB3\DB3\obj\Debug\DB3.exe
-c:\users\cody maxwell\documents\visual studio 2015\Projects\DB3\DB3\obj\Debug\DB3.pdb

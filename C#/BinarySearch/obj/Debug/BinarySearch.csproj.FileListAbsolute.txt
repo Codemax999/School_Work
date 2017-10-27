@@ -1,6 +1,0 @@
-C:\Users\Cody Maxwell\Documents\Visual Studio 2015\Projects\BinarySearch\bin\Debug\BinarySearch.exe.config
-C:\Users\Cody Maxwell\Documents\Visual Studio 2015\Projects\BinarySearch\bin\Debug\BinarySearch.exe
-C:\Users\Cody Maxwell\Documents\Visual Studio 2015\Projects\BinarySearch\bin\Debug\BinarySearch.pdb
-C:\Users\Cody Maxwell\Documents\Visual Studio 2015\Projects\BinarySearch\obj\Debug\BinarySearch.csprojResolveAssemblyReference.cache
-C:\Users\Cody Maxwell\Documents\Visual Studio 2015\Projects\BinarySearch\obj\Debug\BinarySearch.exe
-C:\Users\Cody Maxwell\Documents\Visual Studio 2015\Projects\BinarySearch\obj\Debug\BinarySearch.pdb

@@ -1,6 +1,0 @@
-c:\users\cody maxwell\documents\visual studio 2015\Projects\Maxwell_Cody_StringObjects\Maxwell_Cody_StringObjects\bin\Debug\Maxwell_Cody_StringObjects.exe.config
-c:\users\cody maxwell\documents\visual studio 2015\Projects\Maxwell_Cody_StringObjects\Maxwell_Cody_StringObjects\bin\Debug\Maxwell_Cody_StringObjects.exe
-c:\users\cody maxwell\documents\visual studio 2015\Projects\Maxwell_Cody_StringObjects\Maxwell_Cody_StringObjects\bin\Debug\Maxwell_Cody_StringObjects.pdb
-c:\users\cody maxwell\documents\visual studio 2015\Projects\Maxwell_Cody_StringObjects\Maxwell_Cody_StringObjects\obj\Debug\Maxwell_Cody_StringObjects.csprojResolveAssemblyReference.cache
-c:\users\cody maxwell\documents\visual studio 2015\Projects\Maxwell_Cody_StringObjects\Maxwell_Cody_StringObjects\obj\Debug\Maxwell_Cody_StringObjects.exe
-c:\users\cody maxwell\documents\visual studio 2015\Projects\Maxwell_Cody_StringObjects\Maxwell_Cody_StringObjects\obj\Debug\Maxwell_Cody_StringObjects.pdb

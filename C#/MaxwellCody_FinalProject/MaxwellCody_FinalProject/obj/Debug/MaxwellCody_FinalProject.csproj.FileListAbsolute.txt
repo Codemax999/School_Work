@@ -1,6 +1,0 @@
-c:\users\cody maxwell\documents\visual studio 2015\Projects\MaxwellCody_FinalProject\MaxwellCody_FinalProject\bin\Debug\MaxwellCody_FinalProject.exe.config
-c:\users\cody maxwell\documents\visual studio 2015\Projects\MaxwellCody_FinalProject\MaxwellCody_FinalProject\bin\Debug\MaxwellCody_FinalProject.exe
-c:\users\cody maxwell\documents\visual studio 2015\Projects\MaxwellCody_FinalProject\MaxwellCody_FinalProject\bin\Debug\MaxwellCody_FinalProject.pdb
-c:\users\cody maxwell\documents\visual studio 2015\Projects\MaxwellCody_FinalProject\MaxwellCody_FinalProject\obj\Debug\MaxwellCody_FinalProject.csprojResolveAssemblyReference.cache
-c:\users\cody maxwell\documents\visual studio 2015\Projects\MaxwellCody_FinalProject\MaxwellCody_FinalProject\obj\Debug\MaxwellCody_FinalProject.exe
-c:\users\cody maxwell\documents\visual studio 2015\Projects\MaxwellCody_FinalProject\MaxwellCody_FinalProject\obj\Debug\MaxwellCody_FinalProject.pdb

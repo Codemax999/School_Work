@@ -1,6 +1,0 @@
-c:\users\cody maxwell\documents\visual studio 2015\Projects\Maxwell_Cody_MadLibs\Maxwell_Cody_MadLibs\bin\Debug\Maxwell_Cody_MadLibs.exe.config
-c:\users\cody maxwell\documents\visual studio 2015\Projects\Maxwell_Cody_MadLibs\Maxwell_Cody_MadLibs\bin\Debug\Maxwell_Cody_MadLibs.exe
-c:\users\cody maxwell\documents\visual studio 2015\Projects\Maxwell_Cody_MadLibs\Maxwell_Cody_MadLibs\bin\Debug\Maxwell_Cody_MadLibs.pdb
-c:\users\cody maxwell\documents\visual studio 2015\Projects\Maxwell_Cody_MadLibs\Maxwell_Cody_MadLibs\obj\Debug\Maxwell_Cody_MadLibs.csprojResolveAssemblyReference.cache
-c:\users\cody maxwell\documents\visual studio 2015\Projects\Maxwell_Cody_MadLibs\Maxwell_Cody_MadLibs\obj\Debug\Maxwell_Cody_MadLibs.exe
-c:\users\cody maxwell\documents\visual studio 2015\Projects\Maxwell_Cody_MadLibs\Maxwell_Cody_MadLibs\obj\Debug\Maxwell_Cody_MadLibs.pdb

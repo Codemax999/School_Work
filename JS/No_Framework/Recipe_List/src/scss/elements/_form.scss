@@ -1,0 +1,57 @@
+.recipe-form {
+  color: $shade-heading;
+  margin: 0 auto;
+  max-width: 500px;
+  width: 90%;
+  @include flex(column, center, flex-start);
+  display: none;
+
+  form {
+    width: 100%;
+    @include flex(column, space-around, flex-start);
+
+    div {
+      height: 60px;
+      margin: 10px 0;
+      width: 100%;
+      @include flex(column, space-between, flex-start);
+    }
+
+    label {
+      color: $shade-details;
+      font-size: 14px;
+      font-weight: 300;
+    }
+
+    input {
+      border-bottom: 1px solid $shade-details;
+      border-top: 0;
+      border-left: 0;
+      border-right: 0;
+      height: 25px;
+      width: 100%;
+    }
+
+    .rating-stars {
+      width: 100%;
+      @include flex(row, space-around, center);
+    }
+
+    .rating-1 { display: none; }
+    .star-active { display: none; }
+    .rating-active-1 { display: flex; }
+
+    input[type="submit"] {
+      background: $primary-blue;
+      border: 0;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+      color: #fff;
+      font-size: $font-medium;
+      height: 60px;
+      letter-spacing: 1px;
+      margin: 30px 0;
+
+      &:disabled { background: $shade-placeholder; }
+    }
+  }
+}

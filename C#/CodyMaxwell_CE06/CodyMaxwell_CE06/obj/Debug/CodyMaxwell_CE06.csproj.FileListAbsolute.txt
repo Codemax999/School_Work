@@ -1,6 +1,0 @@
-c:\users\cody maxwell\documents\visual studio 2015\Projects\CodyMaxwell_CE06\CodyMaxwell_CE06\bin\Debug\CodyMaxwell_CE06.exe.config
-C:\Users\Cody Maxwell\documents\visual studio 2015\Projects\CodyMaxwell_CE06\CodyMaxwell_CE06\obj\Debug\CodyMaxwell_CE06.csprojResolveAssemblyReference.cache
-C:\Users\Cody Maxwell\documents\visual studio 2015\Projects\CodyMaxwell_CE06\CodyMaxwell_CE06\bin\Debug\CodyMaxwell_CE06.exe
-C:\Users\Cody Maxwell\documents\visual studio 2015\Projects\CodyMaxwell_CE06\CodyMaxwell_CE06\bin\Debug\CodyMaxwell_CE06.pdb
-C:\Users\Cody Maxwell\documents\visual studio 2015\Projects\CodyMaxwell_CE06\CodyMaxwell_CE06\obj\Debug\CodyMaxwell_CE06.exe
-C:\Users\Cody Maxwell\documents\visual studio 2015\Projects\CodyMaxwell_CE06\CodyMaxwell_CE06\obj\Debug\CodyMaxwell_CE06.pdb

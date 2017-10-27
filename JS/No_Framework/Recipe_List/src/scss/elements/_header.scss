@@ -1,0 +1,56 @@
+header {
+  height: 175px;
+  position: relative;
+  width: 100%;
+  @include mq(large) { height: 280px; } 
+
+  img {
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
+  }
+}
+
+.toggle-recipe {
+  height: 60px;
+  position: absolute;
+  top: 145px;
+  width: calc(100% - 21px);
+  @include flex(row, flex-end, center);
+
+  .toggle-recipe-btn {
+    background: $primary-blue;
+    border-radius: 50%;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    height: 60px;
+    width: 60px;
+    @include flex(row, center, center);
+    @include mq(large) { display: none; } 
+  }
+
+  .toggle-recipe-btn-hide { display: none; }
+}
+
+.toggle-recipe-lrg {
+  display: none;
+  height: 60px;
+  position: absolute;
+  top: 140px;
+  width: 100%;
+  @include mq(large) {
+    @include flex(row, center, center);
+  } 
+
+  .toggle-recipe-lrg-btn {
+    background: $primary-blue;
+    border-radius: 2px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    color: #fff;
+    font-size: $font-large;
+    font-weight: 500;
+    height: 100%;
+    letter-spacing: 1px;
+    width: 300px;
+    @include flex(row, center, center);
+  }
+}

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Recipe</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700" rel="stylesheet">
+    <link href="dist/css/main.css" rel="stylesheet">
+  </head>
+  <body>
+
+    <!-- Header -->
+    <header>
+      <img src="dist/assets/images/food.jpg">
+    </header>
+
+    <!-- Toggle New Recipe (small screen) -->
+    <article class="toggle-recipe">
+      <div class="toggle-recipe-btn">
+        <img src="dist/assets/icons/add.svg" class="toggle-recipe-btn-show">
+        <img src="dist/assets/icons/close.svg" class="toggle-recipe-btn-hide">
+      </div>
+    </article>
+
+    <!-- Open New Recipe (large screen) -->
+    <article class="toggle-recipe-lrg">
+      <div class="toggle-recipe-lrg-btn">
+        <span class="toggle-recipe-lrg-btn-label">
+          New Recipe
+        </span>
+      </div>
+    </article>
+
+    <!-- New Recipe Form -->
+    <section class="recipe-form">
+
+      <h1>New Recipe</h1>
+      <form name="recipeForm" id="recipeForm">
+
+        <div>
+          <label for="name">Name</label>
+          <input id="name" type="text" name="name" aria-required="true">
+        </div>
+
+        <div>
+          <label for="description">Description</label>
+          <input id="description" type="text" name="description" aria-required="true">
+        </div>
+
+        <div>
+          <label for="category">Category</label>
+          <input id="category" type="text" category="category" aria-required="true">
+        </div>
+
+        <div>
+          <label for="rating">Rating</label>
+          <article class="rating-stars">
+            <img src="dist/assets/icons/star_empty.svg" class="star rating-1" id="1">
+            <img src="dist/assets/icons/star.svg" class="star star-active rating-active-1" id="1">
+            <img src="dist/assets/icons/star_empty.svg" class="star rating-2" id="2">
+            <img src="dist/assets/icons/star.svg" class="star star-active rating-active-2" id="2">
+            <img src="dist/assets/icons/star_empty.svg" class="star rating-3" id="3">
+            <img src="dist/assets/icons/star.svg" class="star star-active rating-active-3" id="3">
+            <img src="dist/assets/icons/star_empty.svg" class="star rating-4" id="4">
+            <img src="dist/assets/icons/star.svg" class="star star-active rating-active-4" id="4">
+            <img src="dist/assets/icons/star_empty.svg" class="star rating-5" id="5">
+            <img src="dist/assets/icons/star.svg" class="star star-active rating-active-5" id="5">
+          </article>
+        </div>
+
+        <input id="submit" type="submit" form="recipeForm" value="Confirm" disabled>
+      </form>
+    </section>
+
+    <!-- Recent Recipes -->
+    <section class="recipe-recent">
+      <h1>Recent Recipes</h1>
+      <ul class="recipe-list"></ul>
+    </section>
+
+
+    <!-- JQuery -->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" 
+      integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+      crossorigin="anonymous">
+    </script>
+    <!-- Main JS -->
+    <script src="dist/js/index.js"></script>
+  </body>
+</html>

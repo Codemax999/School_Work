@@ -1,6 +1,0 @@
-c:\users\cody maxwell\documents\visual studio 2015\Projects\Maxwell_Cody_LogicLoops\Maxwell_Cody_LogicLoops\bin\Debug\Maxwell_Cody_LogicLoops.exe.config
-C:\Users\Cody Maxwell\Documents\Visual Studio 2015\Projects\Maxwell_Cody_LogicLoops\Maxwell_Cody_LogicLoops\bin\Debug\Maxwell_Cody_LogicLoops.exe
-C:\Users\Cody Maxwell\Documents\Visual Studio 2015\Projects\Maxwell_Cody_LogicLoops\Maxwell_Cody_LogicLoops\bin\Debug\Maxwell_Cody_LogicLoops.pdb
-C:\Users\Cody Maxwell\Documents\Visual Studio 2015\Projects\Maxwell_Cody_LogicLoops\Maxwell_Cody_LogicLoops\obj\Debug\Maxwell_Cody_LogicLoops.csprojResolveAssemblyReference.cache
-C:\Users\Cody Maxwell\Documents\Visual Studio 2015\Projects\Maxwell_Cody_LogicLoops\Maxwell_Cody_LogicLoops\obj\Debug\Maxwell_Cody_LogicLoops.exe
-C:\Users\Cody Maxwell\Documents\Visual Studio 2015\Projects\Maxwell_Cody_LogicLoops\Maxwell_Cody_LogicLoops\obj\Debug\Maxwell_Cody_LogicLoops.pdb

@@ -1,6 +1,0 @@
-c:\users\cody maxwell\documents\visual studio 2015\Projects\Maxwell_Cody_ArrayLists\Maxwell_Cody_ArrayLists\bin\Debug\Maxwell_Cody_ArrayLists.exe.config
-c:\users\cody maxwell\documents\visual studio 2015\Projects\Maxwell_Cody_ArrayLists\Maxwell_Cody_ArrayLists\bin\Debug\Maxwell_Cody_ArrayLists.exe
-c:\users\cody maxwell\documents\visual studio 2015\Projects\Maxwell_Cody_ArrayLists\Maxwell_Cody_ArrayLists\bin\Debug\Maxwell_Cody_ArrayLists.pdb
-c:\users\cody maxwell\documents\visual studio 2015\Projects\Maxwell_Cody_ArrayLists\Maxwell_Cody_ArrayLists\obj\Debug\Maxwell_Cody_ArrayLists.csprojResolveAssemblyReference.cache
-c:\users\cody maxwell\documents\visual studio 2015\Projects\Maxwell_Cody_ArrayLists\Maxwell_Cody_ArrayLists\obj\Debug\Maxwell_Cody_ArrayLists.exe
-c:\users\cody maxwell\documents\visual studio 2015\Projects\Maxwell_Cody_ArrayLists\Maxwell_Cody_ArrayLists\obj\Debug\Maxwell_Cody_ArrayLists.pdb

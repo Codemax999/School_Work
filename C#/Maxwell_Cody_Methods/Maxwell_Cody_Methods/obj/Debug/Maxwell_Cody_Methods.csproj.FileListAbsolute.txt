@@ -1,6 +1,0 @@
-c:\users\cody maxwell\documents\visual studio 2015\Projects\Maxwell_Cody_Methods\Maxwell_Cody_Methods\bin\Debug\Maxwell_Cody_Methods.exe.config
-c:\users\cody maxwell\documents\visual studio 2015\Projects\Maxwell_Cody_Methods\Maxwell_Cody_Methods\bin\Debug\Maxwell_Cody_Methods.exe
-c:\users\cody maxwell\documents\visual studio 2015\Projects\Maxwell_Cody_Methods\Maxwell_Cody_Methods\bin\Debug\Maxwell_Cody_Methods.pdb
-c:\users\cody maxwell\documents\visual studio 2015\Projects\Maxwell_Cody_Methods\Maxwell_Cody_Methods\obj\Debug\Maxwell_Cody_Methods.csprojResolveAssemblyReference.cache
-c:\users\cody maxwell\documents\visual studio 2015\Projects\Maxwell_Cody_Methods\Maxwell_Cody_Methods\obj\Debug\Maxwell_Cody_Methods.exe
-c:\users\cody maxwell\documents\visual studio 2015\Projects\Maxwell_Cody_Methods\Maxwell_Cody_Methods\obj\Debug\Maxwell_Cody_Methods.pdb

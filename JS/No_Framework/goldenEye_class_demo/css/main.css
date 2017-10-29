@@ -1,0 +1,156 @@
+/* --- Main --- */
+body {
+  background: #0B310C;
+}
+
+/* --- Header Navigation --- */
+.navbar-fixed {
+  align-items: center;
+  background: #000;
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 
+              0 1px 5px 0 rgba(0,0,0,0.12), 
+              0 3px 1px -2px rgba(0,0,0,0.2);
+  display: flex;
+  position: fixed;
+}
+
+nav {
+  background: #000;
+}
+
+nav div {
+  align-items: center;
+  display: flex;
+  height: 100%;
+  justify-content: flex-start;
+  min-width: 150px;
+}
+
+nav div i {
+  font-size: 50px !important;
+  margin: 0 15px 0 20px;
+  background: -webkit-linear-gradient(#FED633, #D5372A);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+nav h5 {
+  letter-spacing: 1px;
+  font-size: 20px;
+  font-weight: 500;
+  background: -webkit-linear-gradient(#FED633, #D5372A);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+span {
+  color: #D5372A;
+  font-size: 27px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  margin-left: 3px;
+}
+
+
+/* --- Main Content --- */
+.main-content {
+  background: #0B310C;
+  height: 100%;
+  padding-top: 80px;
+}
+
+
+/* --- Section Headers --- */
+.main-content h5, .sec-leaderboard h5 {
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  margin: 0 0 20px 20px;
+  background: -webkit-linear-gradient(#3146FB, #95C6FD);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* --- Inputs --- */
+form i {
+  color: #226C23;
+}
+
+.input-field input {
+  border-bottom: 1px solid #226C23 !important;
+  color: #53E255;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+/* label color */
+.input-field label {
+  color: #226C23;
+  letter-spacing: 1px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+/* label focus color */
+.input-field input[type=text]:focus + label, input[type=number]:focus + label{
+  color: #53E255 !important;
+}
+
+/* label underline focus color */
+.input-field input[type=text]:focus, input[type=number]:focus {
+  border-bottom: 1px solid #53E255 !important;
+  box-shadow: 0 1px 0 0 #53E255 !important;
+}
+
+/* valid color */
+.input-field input[type=text].valid, input[type=number].valid {
+  border-bottom: 1px solid #53E255;
+  box-shadow: 0 1px 0 0 #53E255;
+}
+
+/* invalid color */
+.input-field input[type=text].invalid, input[type=number].invalid {
+  border-bottom: 1px solid #D5372A;
+  box-shadow: 0 1px 0 0 #D5372A;
+}
+
+/* icon prefix focus color */
+.input-field .prefix.active {
+  background: -webkit-linear-gradient(#FED633, #D5372A);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Submit Button */
+.submitBtn {
+  align-items: center;
+  display: flex;
+  height: 100px;
+  justify-content: center;
+}
+
+.submitBtn button {
+  background: -webkit-linear-gradient(#FED633, #D5372A);
+  letter-spacing: 1px;
+  width: 170px;
+}
+
+.submitBtn button:disabled {
+  background: #226C23 !important;
+}
+
+
+/* --- LeaderBoard --- */
+thead {
+  border-bottom: 1px solid #226C23;
+}
+
+th {
+  background: -webkit-linear-gradient(#FED633, #D5372A);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+td {
+  color: #53E255;
+}

@@ -1,0 +1,134 @@
+<!-- 
+  Cody Maxwell
+  Full Sail University
+  Design Patterns for Web Programming
+  Python and OOP Review
+  10.28.2017
+  line with static property: (main.js) Line: 133
+  line with subClass method override: (main.js) 110
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Classes</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="css/materialize.min.css">
+    <link rel="stylesheet" href="css/main.css">
+  </head>
+  <body>
+
+    <!-- Nav -->
+    <div class="navbar-fixed">
+      <nav>
+        <div>
+          <i class="material-icons">videogame_asset</i>
+          <h5>GoldenScript</h5><span>007</span>
+        </div>
+      </nav>
+    </div>
+
+    <!-- Content  -->
+    <article class="main-content">
+
+      <!-- Form -->
+      <section class="sec-form">
+
+        <!-- Title -->
+        <h5>Create Player</h5>
+
+        <!-- Form -->
+        <div class="row">
+          <form name="charForm" id="charForm" class="col s12">
+
+            <!-- Character Type -->
+            <div class="input-field col s12 m4">
+              <i class="material-icons prefix">account_box</i>
+              <select id="charType" class="icons">
+                <option value="" disabled selected>Choose your character</option>
+                <option value="spy" data-icon="assets/bond.jpg" class="circle">Spy</option>
+                <option value="programmer" data-icon="assets/boris.jpg" class="circle">Programmer</option>
+              </select>
+              <label for="charType">Player Type</label>
+            </div>
+
+            <!-- Username -->
+            <div class="input-field col s12 m4">
+              <i class="material-icons prefix">edit</i>
+              <input id="charName" name="charName" type="text" class="validate">
+              <label for="charName">Player Name</label>
+            </div>
+
+            <!-- Weapon -->
+            <div class="input-field col s12 m4">
+              <i class="material-icons prefix">edit</i>
+              <input id="charWeapon" name="charWeapon" type="text" class="validate">
+              <label for="charWeapon">Weapon</label>
+            </div>
+
+            <!-- Game 1 -->
+            <div class="input-field col s6 m4">
+              <i class="material-icons prefix">looks_one</i>
+              <input id="charGameOne" name="charGameOne" type="number" class="validate">
+              <label for="charGameOne">Score</label>
+            </div>
+          
+            <!-- Game 2 -->
+            <div class="input-field col s6 m4">
+              <i class="material-icons prefix">looks_two</i>
+              <input id="charGameTwo" name="charGameTwo" type="number" class="validate">
+              <label for="charGameTwo">Score</label>
+            </div>
+
+            <!-- Game 3 -->
+            <div class="input-field col s6 m4">
+              <i class="material-icons prefix">looks_3</i>
+              <input id="charGameThree" name="charGameThree" type="number" class="validate">
+              <label for="charGameThree">Score</label>
+            </div>
+
+            <!-- Submit -->
+            <div class="submitBtn col s12">
+              <button class="btn submit waves-effect waves-light" 
+                type="submit" 
+                name="action" 
+                disabled>Add</button>
+            </div>
+          </form>
+        </div>
+      </section>
+
+      <!-- LeaderBoard -->
+      <section class="sec-leaderboard">
+
+        <!-- Title -->
+        <h5>Leaderboard</h5>
+
+        <!-- Table -->
+        <table class="centered">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Type</th>
+              <th>Weapon</th>
+              <th>Scores</th>
+              <th>Average</th>
+            </tr>
+          </thead>
+          <tbody id="tableBody"></tbody>
+        </table>
+      </section>
+    </article>
+
+
+    <!-- JQuery, Materialize and Main -->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" 
+      integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+      crossorigin="anonymous">
+    </script>
+    <script src="js/materialize.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

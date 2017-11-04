@@ -1,0 +1,133 @@
+<!-- 
+  Cody Maxwell
+  Full Sail University
+  Design Patterns for Web Programming
+  Assignment 2 - Prototype Design Pattern (JS - ES5)
+  11.03.2017
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Classes</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="css/materialize.min.css">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+
+  <!-- Nav -->
+  <div class="navbar-fixed">
+    <nav>
+      <div>
+        <i class="material-icons">videogame_asset</i>
+        <h5 id="gameName"></h5>
+        <span>007</span>
+      </div>
+    </nav>
+  </div>
+
+  <!-- Content  -->
+  <article class="main-content">
+
+    <!-- Form -->
+    <section class="sec-form">
+
+      <!-- Title -->
+      <h5>Create Player</h5>
+
+      <!-- Form -->
+      <div class="row">
+        <form name="charForm" id="charForm" class="col s12">
+
+          <!-- Character Type -->
+          <div class="input-field col s12 m4">
+            <i class="material-icons prefix">account_box</i>
+            <div id="charType" class="charTypeSelect">
+              <div id="charTypeSpy">
+                <img src="assets/bond.jpg" class="char-select-img spy-img">
+                <h6 class="char-select-name spy-name">Spy</h6>
+              </div>
+              <div id="charTypeProgrammer">
+                <img src="assets/boris.jpg" class="programmer-img">
+                <h6 class="programmer-name">Programmer</h6>
+              </div>
+            </div>
+            <label class="active" for="charType">Player Type</label>
+          </div>
+
+          <!-- Username -->
+          <div class="input-field col s12 m4">
+            <i class="material-icons prefix">edit</i>
+            <input id="charName" name="charName" type="text" class="validate">
+            <label class="active" for="charName">Player Name</label>
+          </div>
+
+          <!-- Weapon -->
+          <div class="input-field col s12 m4">
+            <i class="material-icons prefix">edit</i>
+            <input id="charWeapon" name="charWeapon" type="text" class="validate">
+            <label class="active" for="charWeapon">Weapon</label>
+          </div>
+
+          <!-- Game 1 -->
+          <div class="input-field col s6 m4">
+            <i class="material-icons prefix">looks_one</i>
+            <input id="charGameOne" name="charGameOne" type="number" class="validate">
+            <label class="active" for="charGameOne">Score</label>
+          </div>
+
+          <!-- Game 2 -->
+          <div class="input-field col s6 m4">
+            <i class="material-icons prefix">looks_two</i>
+            <input id="charGameTwo" name="charGameTwo" type="number" class="validate">
+            <label class="active" for="charGameTwo">Score</label>
+          </div>
+
+          <!-- Game 3 -->
+          <div class="input-field col s6 m4">
+            <i class="material-icons prefix">looks_3</i>
+            <input id="charGameThree" name="charGameThree" type="number" class="validate">
+            <label class="active" for="charGameThree">Score</label>
+          </div>
+
+          <!-- Submit -->
+          <div class="submitBtn col s12">
+            <button class="btn submit waves-effect waves-light" type="submit" name="action" disabled>Add</button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <!-- LeaderBoard -->
+    <section class="sec-leaderboard">
+
+      <!-- Title -->
+      <h5>Leaderboard</h5>
+
+      <!-- Table -->
+      <table class="centered">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Weapon</th>
+            <th>Scores</th>
+            <th>Average</th>
+          </tr>
+        </thead>
+        <tbody id="tableBody"></tbody>
+      </table>
+    </section>
+  </article>
+
+
+  <!-- Main -->
+  <script src="js/main.js"></script>
+</body>
+
+</html>

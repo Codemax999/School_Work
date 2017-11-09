@@ -88,10 +88,13 @@ class Controller {
       this.model.process(newReview)
         .then(res => {
 
-          // add to reviews, sort and display
+          // add to reviews and sort
           allReviews.push(res);
-          allReviews.sort((a, b) => b.totalScore - a.totalScore);
-          document.querySelector('tBody').innerHTML = '';
+          allReviews.sort((a, b) => b.numScore - a.numScore);
+
+          // clear previous and apply new results
+          Utils.showTable();
+          Utils.clearTable();
           this.view.displayInfo(allReviews);
         })
         .then(Utils.resetForm);
@@ -110,7 +113,10 @@ class Model {
   // use Utility to get total and update data
   process(data) {
     return new Promise(resolve => {
-      data.totalScore = Utils.calcTotal(data.serviceScore, data.foodScore);
+      data.numScore = Utils.calcTotal(data.serviceScore, data.foodScore);
+      data.totalScore = data.numScore + ' Star';
+      data.serviceScore = data.serviceScore + ' Star';
+      data.foodScore = data.foodScore + ' Star';
       resolve(data);
     });
   }
@@ -153,11 +159,6 @@ class Utils {
     return (Number(service) + Number(food)) / 2;
   }
 
-  // update form progress
-  static updateStepTracker() {
-
-  }
-
   // validate form
   static validateForm() {
 
@@ -173,22 +174,26 @@ class Utils {
     validCount += reviewForm.reviewFood.validity.valid ? 0 : 1;
     validCount += reviewForm.reviewFood.value !== 'Choose a rating' ? 0 : 1;
 
-
-    //
-    // Update Tracker Here 
-    //
-
-
-
     // toggle submit button disabled
     const submitBtn = document.querySelector('.submit');
     if (validCount === 0) submitBtn.disabled = false;
     else submitBtn.disabled = true;
   }
 
-  // reset form, submit button and tracker progress
+  // reset form and submit button 
   static resetForm() {
     document.forms.reviewForm.reset();
     document.querySelector('.submit').disabled = true;
+  }
+
+  // show table
+  static showTable() {
+    document.querySelector('.empty').classList.add('hidden');
+    document.querySelector('.table').classList.remove('hidden');
+  }
+
+  // clear table
+  static clearTable() {
+    document.querySelector('tBody').innerHTML = '';
   }
 }

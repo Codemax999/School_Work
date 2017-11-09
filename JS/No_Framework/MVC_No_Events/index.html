@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>MVC Demo</title>
+
+  <!-- Spectre -->
+  <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-exp.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-icons.min.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="navbar">
+    <h1>Review</h1>
+  </header>
+
+
+  <!-- Form -->
+  <form class="form-horizontal">
+
+    <!-- Name of place -->
+    <div class="form-group">
+      <div class="col-3">
+        <label class="form-label" for="form-name">Name</label>
+      </div>
+      <div class="col-9">
+        <div class="has-icon-left">
+          <input type="text" 
+            class="form-input input-lg" 
+            id="form-name" 
+            placeholder="Restaurant">
+          <i class="form-icon icon icon-edit"></i>
+        </div>
+      </div>
+    </div>
+
+    <!-- Service Rating -->
+    <div class="form-group">
+      <div class="col-3">
+        <label class="form-label" for="form-service">Service</label> 
+      </div>
+      <div class="col-9">
+        <select class="form-select" id="form-service">
+          <option disabled selected>Choose a rating</option>
+          <option>1 Star</option>
+          <option>2 Star</option>
+          <option>3 Star</option>
+          <option>4 Star</option>
+          <option>5 Star</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- Food Rating -->
+    <div class="form-group">
+      <div class="col-3">
+        <label class="form-label" for="form-food">Food</label> 
+      </div>
+      <div class="col-9">
+        <select class="form-select" id="form-food">
+          <option disabled selected>Choose a rating</option>
+          <option>1 Star</option>
+          <option>2 Star</option>
+          <option>3 Star</option>
+          <option>4 Star</option>
+          <option>5 Star</option> 
+        </select>
+      </div>
+    </div>
+
+    <!-- Submit -->
+    <button class="btn btn-primary disabled">submit review</button>
+  </form>
+
+
+  <!-- Form Progrss -->
+  <ul class="step">
+    <li class="step-item active">
+      <a href="#" class="tooltip" data-tooltip="Step 1">Step 1</a>
+    </li>
+    <li class="step-item">
+      <a href="#" class="tooltip" data-tooltip="Step 2">Step 2</a>
+    </li>
+    <li class="step-item">
+      <a href="#" class="tooltip" data-tooltip="Step 3">Step 3</a>
+    </li>
+    <li class="step-item">
+      <a href="#" class="tooltip" data-tooltip="Step 4">Step 4</a>
+    </li>
+  </ul>
+
+
+  <!-- Loading (on load and on item add) -->
+  <!-- <div class="loading loading-lg"></div> -->
+
+
+  <!-- No Data Added -->
+  <div class="empty">
+    <div class="empty-icon">
+      <i class="icon icon-2x icon-bookmark"></i>
+    </div>
+    <p class="empty-title h5">You have no reviews</p>
+    <p class="empty-subtitle">Fill out form above to save a new review.</p>
+  </div>
+
+
+  <!-- Table of Data -->
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Place</th>
+        <th>Service</th>
+        <th>Food</th>
+        <th>Total</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Bond</td>
+        <td>Mortons</td>
+        <td>5</td>
+        <td>5</td>
+        <td>5</td>
+      </tr>
+      <tr>
+        <td>Boris</td>
+        <td>Al Carbon</td>
+        <td>3</td>
+        <td>5</td>
+        <td>4</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- Main -->
+  <script src="js/main.js"></script>
+</body>
+</html>

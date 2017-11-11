@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>MVC Demo</title>
+
+  <!-- Main -->
+  <link rel="stylesheet" href="css/main.css">
+
+  <!-- Spectre -->
+  <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-exp.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-icons.min.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="navbar">
+    <h2>Restaurant Review</h2>
+  </header>
+
+
+  <!-- Form -->
+  <form class="form-horizontal" name="reviewForm" id="reviewForm">
+
+    <!-- Name of place -->
+    <div class="form-group">
+      <div class="col-3">
+        <label class="form-label" for="form-name">Name</label>
+      </div>
+      <div class="col-9">
+        <div class="has-icon-left">
+          <input class="form-input input-lg" 
+            type="text"  
+            id="form-name" 
+            name="reviewName"
+            placeholder="Restaurant">
+          <i class="form-icon icon icon-edit"></i>
+        </div>
+      </div>
+    </div>
+
+    <!-- Service Rating -->
+    <div class="form-group">
+      <div class="col-3">
+        <label class="form-label" for="form-service">Service</label> 
+      </div>
+      <div class="col-9">
+        <select class="form-select" id="form-service" name="reviewService">
+          <option disabled selected>Choose a rating</option>
+          <option value="1">1 Star</option>
+          <option value="2">2 Star</option>
+          <option value="3">3 Star</option>
+          <option value="4">4 Star</option>
+          <option value="5">5 Star</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- Food Rating -->
+    <div class="form-group">
+      <div class="col-3">
+        <label class="form-label" for="form-food">Food</label> 
+      </div>
+      <div class="col-9">
+        <select class="form-select" id="form-food" name="reviewFood">
+          <option disabled selected>Choose a rating</option>
+          <option value="1">1 Star</option>
+          <option value="2">2 Star</option>
+          <option value="3">3 Star</option>
+          <option value="4">4 Star</option>
+          <option value="5">5 Star</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- Submit -->
+    <button class="btn btn-primary submit" type="submit" disabled>
+      submit review
+    </button>
+  </form>
+
+
+  <!-- No Data Added -->
+  <div class="empty">
+    <div class="empty-icon">
+      <i class="icon icon-2x icon-bookmark"></i>
+    </div>
+    <p class="empty-title h5">You have no reviews</p>
+    <p class="empty-subtitle">Fill out the form above to save a new review.</p>
+  </div>
+
+
+  <!-- Table of Data -->
+  <table class="table table-hover hidden">
+    <thead>
+      <tr>
+        <th>Place</th>
+        <th>Service</th>
+        <th>Food</th>
+        <th>Total</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+
+  <!-- Main -->
+  <script src="js/main.js"></script>
+  <!-- Utility -->
+  <script src="js/utils.js"></script>
+</body>
+</html>

@@ -1,3 +1,12 @@
+<!--
+  Cody Maxwell
+  Design Patterns for Web Programming - Online
+  Assignment 4 - MVC with Events
+  11.11.2017
+
+  Static Variable displayed: 30 id=reviewName
+-->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,7 +27,7 @@
 
   <!-- Header -->
   <header class="navbar">
-    <h2>Restaurant Review</h2>
+    <h2><span id="reviewName"></span> Review</h2>
   </header>
 
 
@@ -36,7 +45,8 @@
             type="text"  
             id="form-name" 
             name="reviewName"
-            placeholder="Restaurant">
+            placeholder="Restaurant"
+            autocomplete="off">
           <i class="form-icon icon icon-edit"></i>
         </div>
       </div>

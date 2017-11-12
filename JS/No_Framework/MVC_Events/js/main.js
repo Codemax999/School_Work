@@ -4,7 +4,8 @@
   Assignment 4 - MVC with Events
   11.11.2017
 
-  Static Variable on line: 145
+  Static Variable declared: 132
+  Static Variable updated in method at: 94
 */
 
 // --- Load Event ---
@@ -17,7 +18,7 @@ class Assignment {
   constructor() {
 
     // create instance of program
-    let newCtrl = new Controller();
+    const newCtrl = new Controller();
   }
 
   // static method for singleton 
@@ -37,6 +38,7 @@ class Assignment {
 class Review {
 
   constructor(placeName, serviceScore, foodScore, totalScore) {
+
     this.placeName = placeName;
     this.serviceScore = serviceScore;
     this.foodScore = foodScore;
@@ -54,8 +56,9 @@ class Controller {
     const model = new Model();
     const view = new View();
 
-    // attach event listeners
+    // attach event listeners and default name
     this.eventListeners();
+    this.updateName('Restaurant');
   }
 
   // input listeners
@@ -64,19 +67,34 @@ class Controller {
     // Controller
     const self = this;
 
-    // form input listeners
-    document.querySelector('#form-name').addEventListener('keyup', Utils.validateForm);
+    // validate form and update static property 
+    document.querySelector('#form-name').addEventListener('keyup', event => {
+
+      Utils.validateForm();
+      self.updateName(event.target.value);
+    });
+
+    // form input listeners (service and food score)
     document.querySelector('#form-service').addEventListener('change', Utils.validateForm);
     document.querySelector('#form-food').addEventListener('change', Utils.validateForm);
 
     // submit form
     document.querySelector('#reviewForm').addEventListener('submit', event => {
+
       event.preventDefault();
       self.submitForm();
+      self.updateName('Restaurant');
     });
 
     // custom event listener for returned processed data
     document.addEventListener('dataProcessed', self.toView);
+  }
+
+  // review name (update static variable and title)
+  updateName(val) {
+
+    Controller.reviewName = val.length > 0 ? val : 'Restaurant';
+    document.querySelector('#reviewName').textContent = Controller.reviewName;
   }
 
   // submit form
@@ -89,7 +107,7 @@ class Controller {
     const foodScore = reviewForm.reviewFood.value;
 
     // create Review data object
-    const newReview = new Review(placeName, serviceScore, foodScore, 0);
+    let newReview = new Review(placeName, serviceScore, foodScore, 0);
 
     // process in model
     const processData = new CustomEvent('processData', { 'detail': newReview });
@@ -109,6 +127,9 @@ class Controller {
     document.dispatchEvent(displayInfo);
   }
 }
+
+// Static Variable: review name
+Controller.reviewName;
 
 
 // --- Model ---
@@ -140,8 +161,7 @@ class Model {
   }
 }
 
-// --- Static Variable ---
-// Holds all created reviews
+// static variable: all created reviews
 Model.allReviews = [];
 
 
@@ -157,6 +177,7 @@ class View {
   // show data in table
   displayInfo(payload) {
 
+    // loop through reviews
     const data = payload.detail;
     for (let x in data) {
 

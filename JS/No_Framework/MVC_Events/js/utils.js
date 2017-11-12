@@ -6,6 +6,11 @@ class Utils {
     return (Number(service) + Number(food)) / 2;
   }
 
+  // sort data 
+  static sortData(payload) {
+    return payload.sort((a, b) => b.numScore - a.numScore);
+  }
+
   // add star to rating
   static addStar(num) {
     return `${num} Star`;

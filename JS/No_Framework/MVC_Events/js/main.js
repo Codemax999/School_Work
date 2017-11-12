@@ -2,7 +2,9 @@
   Cody Maxwell
   Design Patterns for Web Programming - Online
   Assignment 4 - MVC with Events
-  11.9.2017
+  11.11.2017
+
+  Static Variable on line: 145
 */
 
 // --- Load Event ---
@@ -12,8 +14,9 @@ window.addEventListener('load', () => Assignment.getInstance());
 // --- Singleton ---
 class Assignment {
 
-  // create instance of program
   constructor() {
+
+    // create instance of program
     let newCtrl = new Controller();
   }
 
@@ -47,65 +50,63 @@ class Controller {
 
   constructor() {
 
-    // model and view
-    this.model = new Model();
-    this.view = new View();
+    // model and view instantiation
+    const model = new Model();
+    const view = new View();
 
-    // set form listeners
-    this.inputListeners();
-    this.submitForm();
+    // attach event listeners
+    this.eventListeners();
   }
 
   // input listeners
-  inputListeners() {
+  eventListeners() {
+
+    // Controller
+    const self = this;
+
+    // form input listeners
     document.querySelector('#form-name').addEventListener('keyup', Utils.validateForm);
     document.querySelector('#form-service').addEventListener('change', Utils.validateForm);
     document.querySelector('#form-food').addEventListener('change', Utils.validateForm);
+
+    // submit form
+    document.querySelector('#reviewForm').addEventListener('submit', event => {
+      event.preventDefault();
+      self.submitForm();
+    });
+
+    // custom event listener for returned processed data
+    document.addEventListener('dataProcessed', self.toView);
   }
 
   // submit form
   submitForm() {
 
-    // created reviews
-    let allReviews = [];
+    // form and form properties
+    const reviewForm = document.forms.reviewForm;
+    const placeName = reviewForm.reviewName.value.trim();
+    const serviceScore = reviewForm.reviewService.value;
+    const foodScore = reviewForm.reviewFood.value;
 
-    // submit listener
-    document.querySelector('#reviewForm').addEventListener('submit', event => {
+    // create Review data object
+    const newReview = new Review(placeName, serviceScore, foodScore, 0);
 
-      // prevent page reload
-      event.preventDefault();
+    // process in model
+    const processData = new CustomEvent('processData', { 'detail': newReview });
+    document.dispatchEvent(processData);
+  }
 
-      // form and form properties
-      const reviewForm = document.forms.reviewForm;
-      const placeName = reviewForm.reviewName.value.trim();
-      const serviceScore = reviewForm.reviewService.value;
-      const foodScore = reviewForm.reviewFood.value;
+  // pass data to model
+  toView(payload) {
 
-      // create Review data object
-      const newReview = new Review(placeName, serviceScore, foodScore, 0);
+    // clear previous, apply new results and reset form
+    Utils.showTable();
+    Utils.clearTable();
+    Utils.resetForm();
 
-      //
-      // DISPATCH EVENT TO MODEL
-      //
-      // process in model
-      this.model.process(newReview)
-        .then(res => {
-
-          // add to reviews and sort
-          allReviews.push(res);
-          allReviews.sort((a, b) => b.numScore - a.numScore);
-
-          // clear previous and apply new results
-          Utils.showTable();
-          Utils.clearTable();
-
-          //
-          // DISPATCH EVENT TO VIEW
-          //
-          this.view.displayInfo(allReviews);
-        })
-        .then(Utils.resetForm);
-    });
+    // dispatch event to View to display
+    const displayInfo = new CustomEvent('displayInfo', { 'detail': payload.detail });
+    document.dispatchEvent(displayInfo);
   }
 }
 
@@ -114,32 +115,49 @@ class Controller {
 class Model {
 
   constructor() {
-    console.log('model created');
+
+    // attach event listener
+    document.addEventListener('processData', this.process);
   }
 
-  // use Utility to get total and update data
-  process(data) {
-    return new Promise(resolve => {
-      data.numScore = Utils.calcTotal(data.serviceScore, data.foodScore);
-      data.totalScore = Utils.addStar(data.numScore);
-      data.serviceScore = Utils.addStar(data.serviceScore);
-      data.foodScore = Utils.addStar(data.foodScore);
-      resolve(data);
-    });
+  // use Utility to get total and sort data
+  process(payload) {
+
+    // new review: calculate total score 
+    let data = payload.detail;
+    data.numScore = Utils.calcTotal(data.serviceScore, data.foodScore);
+    data.totalScore = Utils.addStar(data.numScore);
+    data.serviceScore = Utils.addStar(data.serviceScore);
+    data.foodScore = Utils.addStar(data.foodScore);
+
+    // new review: add to allReviews and sort
+    Model.allReviews.push(data);
+    Model.allReviews = Utils.sortData(Model.allReviews);
+
+    // dispatch data back to controller 
+    const dataProcessed = new CustomEvent('dataProcessed', { 'detail': Model.allReviews });
+    document.dispatchEvent(dataProcessed);
   }
 }
+
+// --- Static Variable ---
+// Holds all created reviews
+Model.allReviews = [];
 
 
 // --- View ---
 class View {
 
   constructor() {
-    console.log('view created');
+
+    // attach event listener
+    document.addEventListener('displayInfo', this.displayInfo);
   }
 
   // show data in table
-  displayInfo(data) {
-    
+  displayInfo(payload) {
+
+    const data = payload.detail;
     for (let x in data) {
 
       // create table row

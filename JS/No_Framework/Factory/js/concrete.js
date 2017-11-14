@@ -1,31 +1,40 @@
 // 0. Abstract Character 
 class Character {
 
-  constructor() {
-    console.log('Character created');
+  constructor(charType, charName, charWeapon) {
+
+    this.charType = charType;
+    this.charName = charName;
+    this.charWeapon = charWeapon;
   }
 }
 
 // 1. Concrete Spy
 class Spy extends Character {
 
-  constructor() {
-    console.log('Spy created');
+  constructor(...args) {
+
+    super(...args);
+    this.catchPhrase = `The name is ${this.charName}, ${this.charName}`;
   }
 }
 
 // 2. Concrete Programmer
 class Programmer extends Character {
 
-  constructor() {
-    console.log('Programmer created');
+  constructor(...args) {
+
+    super(...args);
+    this.catchPhrase = 'I\'m invincible!';
   }
 }
 
 // 3. Concrete Engineer 
 class Engineer extends Character {
 
-  constructor() {
-    console.log('Engineer created');
+  constructor(...args) {
+
+    super(...args);
+    this.catchPhrase = 'Grow up, Bond.';
   }
 }

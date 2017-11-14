@@ -17,13 +17,13 @@
 <body>
 
   <!-- Created Characters Counter -->
-  <figure class="avatar avatar-xl badge" data-badge="0">
+  <figure class="avatar avatar-xl badge" id="spy">
     <img src="assets/james.jpg" alt="James">
   </figure>
-  <figure class="avatar avatar-xl badge" data-badge="0">
+  <figure class="avatar avatar-xl badge" id="programmer">
     <img src="assets/boris.png" alt="Boris">
   </figure>
-  <figure class="avatar avatar-xl badge" data-badge="0">
+  <figure class="avatar avatar-xl badge" id="engineer">
     <img src="assets/q.jpeg" alt="Q">
   </figure>
 
@@ -37,7 +37,7 @@
         <label class="form-label" for="charType">Type</label>
       </div>
       <div class="col-9">
-        <select class="form-select" id="charType" name="characterType">
+        <select class="form-select" id="charType" name="charType">
           <option disabled selected>Choose a character</option>
           <option value="spy">Spy</option>
           <option value="programmer">Programmer</option>
@@ -89,21 +89,8 @@
   </form>
 
 
-  <!-- Created Characters Count Tracker -->
-  <ul class="step">
-    <li class="step-item active">
-      <a href="#" class="tooltip" data-tooltip="Character 1"></a>
-    </li>
-    <li class="step-item">
-      <a href="#" class="tooltip" data-tooltip="Character 2"></a>
-    </li>
-    <li class="step-item">
-      <a href="#" class="tooltip" data-tooltip="Character 3"></a>
-    </li>
-  </ul>
-
   <!-- Display Info Button -->
-  <button class="btn btn-primary submit" type="submit" disabled>
+  <button class="btn display" disabled>
     display info
   </button>
 

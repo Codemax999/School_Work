@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Factory</title>
+
+  <!-- Main -->
+  <link rel="stylesheet" href="css/main.css">
+  
+  <!-- Spectre -->
+  <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-exp.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-icons.min.css">
+</head>
+<body>
+
+  <!-- Created Characters Counter -->
+  <figure class="avatar avatar-xl badge" data-badge="0">
+    <img src="assets/james.jpg" alt="James">
+  </figure>
+  <figure class="avatar avatar-xl badge" data-badge="0">
+    <img src="assets/boris.png" alt="Boris">
+  </figure>
+  <figure class="avatar avatar-xl badge" data-badge="0">
+    <img src="assets/q.jpeg" alt="Q">
+  </figure>
+
+
+  <!-- Character Form -->
+  <form class="form-horizontal" name="characterForm" id="characterForm">
+  
+    <!-- Character Type -->
+    <div class="form-group">
+      <div class="col-3">
+        <label class="form-label" for="charType">Type</label>
+      </div>
+      <div class="col-9">
+        <select class="form-select" id="charType" name="characterType">
+          <option disabled selected>Choose a character</option>
+          <option value="spy">Spy</option>
+          <option value="programmer">Programmer</option>
+          <option value="engineer">Engineer</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- Name of Character -->
+    <div class="form-group">
+      <div class="col-3">
+        <label class="form-label" for="charName">Name</label>
+      </div>
+      <div class="col-9">
+        <div class="has-icon-left">
+          <input class="form-input input-lg" 
+            type="text" 
+            id="charName" 
+            name="charName" 
+            placeholder="..." 
+            autocomplete="off">
+          <i class="form-icon icon icon-edit"></i>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Name of Weapon -->
+    <div class="form-group">
+      <div class="col-3">
+        <label class="form-label" for="charWeapon">Weapon</label>
+      </div>
+      <div class="col-9">
+        <div class="has-icon-left">
+          <input class="form-input input-lg" 
+            type="text" 
+            id="charWeapon" 
+            name="charWeapon" 
+            placeholder="..." 
+            autocomplete="off">
+          <i class="form-icon icon icon-edit"></i>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Submit -->
+    <button class="btn btn-primary submit" type="submit" disabled>
+      submit review
+    </button>
+  </form>
+
+
+  <!-- Created Characters Count Tracker -->
+  <ul class="step">
+    <li class="step-item active">
+      <a href="#" class="tooltip" data-tooltip="Character 1"></a>
+    </li>
+    <li class="step-item">
+      <a href="#" class="tooltip" data-tooltip="Character 2"></a>
+    </li>
+    <li class="step-item">
+      <a href="#" class="tooltip" data-tooltip="Character 3"></a>
+    </li>
+  </ul>
+
+  <!-- Display Info Button -->
+  <button class="btn btn-primary submit" type="submit" disabled>
+    display info
+  </button>
+
+
+  <!-- No Characters to display -->
+  <div class="empty">
+    <div class="empty-icon">
+      <i class="icon icon-3x icon-people"></i>
+    </div>
+    <p class="empty-title h5">You have no characters</p>
+    <p class="empty-subtitle">Create a minimum of 3 characters to display them.</p>
+  </div>
+
+
+  <!-- Created Character Details -->
+
+  
+  <!-- Main (Singleton and Utility) -->
+  <script src="js/main.js"></script>
+  <!-- Factory Class -->
+  <script src="js/factory.js"></script>
+  <!-- Concrete Classes -->
+  <script src="js/concrete.js"></script>
+</body>
+</html>

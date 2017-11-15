@@ -1,0 +1,97 @@
+/* --- Main --- */
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 568px !important;
+  min-width: 320px !important;
+  width: 100vw;
+} 
+
+
+/* --- Character Counter --- */
+h2 {
+  padding: 15px 0 10px 10px;
+}
+
+.avatar-counter {
+  display: flex;
+  justify-content: center;
+}
+
+.avatar-wrap {
+  display: flex;
+  justify-content: space-around;
+  margin: 25px 0 35px 0;
+  max-width: 500px;
+  min-width: 300px;
+  width: 100%;
+}
+
+
+/* --- Character Form --- */
+.char-form {
+  display: flex;
+  justify-content: center;
+}
+
+form {
+  max-width: 500px;
+  min-width: 300px;
+  width: 100%;
+}
+
+.form-btns {
+  display: flex;
+  justify-content: space-around;
+  margin: 50px 0;
+}
+
+.form-btns button {
+  width: 150px;
+}
+
+/* --- No Data / Created Characters --- */
+.hide {
+  display: none !important;
+}
+
+.empty {
+  min-height: 300px;
+}
+
+.all-content {
+  display: flex;
+  justify-content: center;
+}
+
+.created-characters {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding-top: 25px;
+}
+
+li {
+  margin: 10px;
+}
+
+.card {
+  max-width: 300px;
+}
+
+.card-image {
+  height: 175px;
+  width: 300px;
+}
+
+.card-image img {
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
+}
+
+.cardCharType {
+  text-transform: capitalize;
+}

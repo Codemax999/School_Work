@@ -4,11 +4,14 @@ class CharacterFactory {
   // create spy, programmer, engineer and default
   static createCharacter(...args) {
 
-    switch (args[0]) {
-      case 'spy': return new Spy(...args);
-      case 'programmer': return new Programmer(...args);
-      case 'engineer': return new Engineer(...args);
-      default: console.error('Unable to create this character');
-    }
+    return new Promise((resolve, reject) => {
+
+      switch (args[0]) {
+        case 'spy': resolve(new Spy(...args));
+        case 'programmer': resolve(new Programmer(...args));
+        case 'engineer': resolve(new Engineer(...args));
+        default: reject('Can not create this character');
+      }
+    });
   }
 }

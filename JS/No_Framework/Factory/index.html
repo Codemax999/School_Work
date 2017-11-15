@@ -17,95 +17,119 @@
 <body>
 
   <!-- Created Characters Counter -->
-  <figure class="avatar avatar-xl badge" id="spy">
-    <img src="assets/james.jpg" alt="James">
-  </figure>
-  <figure class="avatar avatar-xl badge" id="programmer">
-    <img src="assets/boris.png" alt="Boris">
-  </figure>
-  <figure class="avatar avatar-xl badge" id="engineer">
-    <img src="assets/q.jpeg" alt="Q">
-  </figure>
+  <h2>Character Creator</h2>
+  <section class="avatar-counter">
+    <div class="avatar-wrap">
+      <figure class="avatar avatar-xl badge" id="spy">
+        <img src="assets/james.jpg" alt="James">
+      </figure>
+      <figure class="avatar avatar-xl badge" id="programmer">
+        <img src="assets/boris.png" alt="Boris">
+      </figure>
+      <figure class="avatar avatar-xl badge" id="engineer">
+        <img src="assets/q.jpeg" alt="Q">
+      </figure>
+    </div>
+  </section>
 
 
   <!-- Character Form -->
-  <form class="form-horizontal" name="characterForm" id="characterForm">
-  
-    <!-- Character Type -->
-    <div class="form-group">
-      <div class="col-3">
-        <label class="form-label" for="charType">Type</label>
-      </div>
-      <div class="col-9">
-        <select class="form-select" id="charType" name="charType">
-          <option disabled selected>Choose a character</option>
-          <option value="spy">Spy</option>
-          <option value="programmer">Programmer</option>
-          <option value="engineer">Engineer</option>
-        </select>
-      </div>
-    </div>
-
-    <!-- Name of Character -->
-    <div class="form-group">
-      <div class="col-3">
-        <label class="form-label" for="charName">Name</label>
-      </div>
-      <div class="col-9">
-        <div class="has-icon-left">
-          <input class="form-input input-lg" 
-            type="text" 
-            id="charName" 
-            name="charName" 
-            placeholder="..." 
-            autocomplete="off">
-          <i class="form-icon icon icon-edit"></i>
+  <section class="char-form">
+    <form class="form-horizontal" name="characterForm" id="characterForm">
+    
+      <!-- Character Type -->
+      <div class="form-group">
+        <div class="col-3">
+          <label class="form-label" for="charType">Type</label>
+        </div>
+        <div class="col-9">
+          <select class="form-select" id="charType" name="charType">
+            <option disabled selected>Choose a character</option>
+            <option value="spy">Spy</option>
+            <option value="programmer">Programmer</option>
+            <option value="engineer">Engineer</option>
+            <option value="wrong">DO NOT SELECT THIS</option>
+          </select>
         </div>
       </div>
-    </div>
-  
-    <!-- Name of Weapon -->
-    <div class="form-group">
-      <div class="col-3">
-        <label class="form-label" for="charWeapon">Weapon</label>
-      </div>
-      <div class="col-9">
-        <div class="has-icon-left">
-          <input class="form-input input-lg" 
-            type="text" 
-            id="charWeapon" 
-            name="charWeapon" 
-            placeholder="..." 
-            autocomplete="off">
-          <i class="form-icon icon icon-edit"></i>
+    
+      <!-- Name of Character -->
+      <div class="form-group">
+        <div class="col-3">
+          <label class="form-label" for="charName">Name</label>
+        </div>
+        <div class="col-9">
+          <div class="has-icon-left">
+            <input class="form-input input-lg" type="text" id="charName" name="charName" placeholder="..." autocomplete="off">
+            <i class="form-icon icon icon-edit"></i>
+          </div>
         </div>
       </div>
-    </div>
-  
-    <!-- Submit -->
-    <button class="btn btn-primary submit" type="submit" disabled>
-      submit review
-    </button>
-  </form>
-
-
-  <!-- Display Info Button -->
-  <button class="btn display" disabled>
-    display info
-  </button>
+    
+      <!-- Name of Weapon -->
+      <div class="form-group">
+        <div class="col-3">
+          <label class="form-label" for="charWeapon">Weapon</label>
+        </div>
+        <div class="col-9">
+          <div class="has-icon-left">
+            <input class="form-input input-lg" type="text" id="charWeapon" name="charWeapon" placeholder="..." autocomplete="off">
+            <i class="form-icon icon icon-edit"></i>
+          </div>
+        </div>
+      </div>
+    
+      <div class="form-btns">
+    
+        <!-- Submit -->
+        <button class="btn btn-primary submit" disabled>
+          add character
+        </button>
+    
+        <!-- Display Info Button -->
+        <button class="btn display" disabled>
+          display all
+        </button>
+      </div>
+    </form>
+  </section>
 
 
   <!-- No Characters to display -->
-  <div class="empty">
-    <div class="empty-icon">
-      <i class="icon icon-3x icon-people"></i>
+  <section class="no-content">
+    <div class="empty">
+      <div class="empty-icon">
+        <i class="icon icon-3x icon-people"></i>
+      </div>
+      <p class="empty-title h5">You have no characters</p>
+      <p class="empty-subtitle">
+        Create a minimum of 3 characters to display them.
+      </p>
     </div>
-    <p class="empty-title h5">You have no characters</p>
-    <p class="empty-subtitle">Create a minimum of 3 characters to display them.</p>
-  </div>
+  </section>
 
 
   <!-- Created Character Details -->
+  <section class="all-content hide">
+    <ul class="created-characters"></ul>
+  </section>
+
+
+  <!-- Modal Alert -->
+  <div class="modal modal-sm">
+    <div class="modal-overlay"></div>
+    <div class="modal-container">
+      <div class="modal-header">
+        <button class="btn btn-clear float-right"></button>
+        <div class="modal-title h5">Invalid character</div>
+      </div>
+      <div class="modal-body">
+        <div class="content">
+          I said 'DO NOT SELECT THIS' this character type is not supported.
+        </div>
+      </div>
+    </div>
+  </div>
 
   
   <!-- Main (Singleton and Utility) -->

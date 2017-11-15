@@ -37,18 +37,34 @@ class Controller {
     document.querySelector('#charWeapon').addEventListener('keyup', Utils.validateForm);
 
     // submit
-    document.querySelector('#characterForm').addEventListener('submit', event => {
+    document.querySelector('.submit').addEventListener('click', event => {
 
       event.preventDefault();
       self.createCharacter()
         .then(self.model.saveCharacter)
         .then(Utils.updateCount)
         .then(Utils.checkCount)
-        .then(Utils.resetForm);
+        .then(Utils.resetForm)
+        .catch(err => {
+
+          // error
+          console.error(err);
+          Utils.resetForm();
+          Utils.showModal();
+        });
     });
 
     // display info
-    document.querySelector('.display').addEventListener('click', self.view.displayInfo);
+    document.querySelector('.display').addEventListener('click', event => {
+
+      event.preventDefault();
+      Utils.clearResults()
+        .then(Utils.hideEmptyContent)
+        .then(self.view.displayInfo);
+    });
+
+    // close modal 
+    document.querySelector('.btn-clear').addEventListener('click', Utils.closeModal);
   }
 
   createCharacter() {
@@ -86,8 +102,38 @@ Model.allCharacters = [];
 // --- View ---
 class View {
 
+  // show new data
   displayInfo() {
-    console.log(Model.allCharacters);
+
+    // for each character add to list
+    Model.allCharacters.reverse().map(x => {
+
+      // determine image
+      let charImg;
+      charImg = x.charType === 'spy' ? 'assets/james.jpg' : charImg;
+      charImg = x.charType === 'programmer' ? 'assets/boris.png' : charImg;
+      charImg = x.charType === 'engineer' ? 'assets/q.jpeg' : charImg;
+
+      // list item
+      const li = document.createElement('li');
+      li.innerHTML =
+        `
+        <div class="card">
+          <div class="card-image">
+            <img src="${charImg}">
+          </div>
+          <div class="card-header">
+            <div class="card-title h5">${x.charName}</div>
+            <div class="card-subtitle text-gray">
+              <span class="cardCharType">${x.charType}</span> 
+              with a ${x.charWeapon}
+            </div>
+          </div>
+          <div class="card-body">${x.catchPhrase}</div>
+        </div>
+      `;
+      document.querySelector('.created-characters').appendChild(li);
+    });
   }
 }
 
@@ -124,6 +170,18 @@ class Utils {
     document.querySelector('.submit').disabled = true;
   }
 
+  // character type error
+  static showModal() {
+
+    document.querySelector('.modal').classList.add('active');
+  }
+
+  // close error modal
+  static closeModal() {
+
+    document.querySelector('.modal').classList.remove('active');
+  }
+
   // character counter
   static updateCount(newChar) {
 
@@ -149,7 +207,24 @@ class Utils {
     // display button
     const displayBtn = document.querySelector('.display');
 
-    if (Model.allCharacters.length >= 3) displayBtn.disabled = false;
+    if (Model.allCharacters.length >= 1) displayBtn.disabled = false;
     else displayBtn.disabled = true;
+  }
+
+  // hide empty content placeholder
+  static hideEmptyContent() {
+
+    document.querySelector('.no-content').classList.add('hide');
+    document.querySelector('.all-content').classList.remove('hide');
+  }
+
+  // clear previous results
+  static clearResults() {
+
+    return new Promise(resolve => {
+
+      document.querySelector('.created-characters').innerHTML = '';
+      resolve();
+    });
   }
 }

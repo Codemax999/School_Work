@@ -10,7 +10,7 @@ class Character:
     def char_data(self):
 
         # display all character data
-        print(f'{self.char_type.upper()}: {self.char_name} uses a {self.char_weapon}')
+        print(f'{self.char_type.upper()}: {self.char_name} uses a {self.char_weapon} and says, "{self.catch_phrase}"')
 
 
 # --- Concrete Spy ---
@@ -19,7 +19,7 @@ class Spy(Character):
     def __init__(self, char_type, char_name, char_weapon):
 
         super().__init__(char_type, char_name, char_weapon)
-        self.catch_phrase = f'My name is {self.char_name}, {self.char_name}.'
+        self.catch_phrase = f'My name is Bond, {self.char_name} Bond.'
 
 
 # --- Concrete Programmer ---

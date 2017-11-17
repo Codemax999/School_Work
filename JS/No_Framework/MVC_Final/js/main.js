@@ -23,11 +23,8 @@ class Controller {
     const model = new Model();
     const view = new View();
 
-    // listen for next index
-    document.querySelector('.btn').addEventListener('click', this.loadData);
-
-    // load initial data
-    this.loadData();
+    // load animations and event listeners
+    this.onLoad();
   }
 
   static getInstance() {
@@ -41,11 +38,35 @@ class Controller {
     } else console.error('Already instantiated');
   }
 
+  onLoad() {
+
+    // listen for next index
+    document.querySelector('.btn').addEventListener('click', () => this.nextIndex());
+
+    // animate in data
+    Utils.animateInAll();
+
+    // load initial data
+    this.loadData();
+  }
+
   loadData() {
 
     // process in model
     const processData = new CustomEvent('processData', { 'detail': data });
     document.dispatchEvent(processData);
+  }
+
+  nextIndex() {
+
+    // animate in button
+    Utils.animateBtn();
+
+    // animate out
+    Utils.animateCard();
+
+    // wait for animation
+    setTimeout(() => this.loadData(data), 1000);
   }
 }
 
@@ -117,7 +138,7 @@ class View {
           <div class="card-subtitle text-gray">${film.movieDuration}</div>
         </div>
       </div>
-    `
+    `;
   }
 }
 
@@ -134,5 +155,43 @@ class Utils {
     min = min.toString().length === 1 ? `0${min}` : min;
 
     return `${hour}:${min}`;
+  }
+
+  // animate in all content on load 
+  static animateInAll() {
+
+    let card = document.querySelector('.currentFilm');
+    let btn = document.querySelector('button');
+
+    card.classList.add('zoomIn');
+    btn.classList.add('zoomIn');
+
+    setTimeout(() => {
+
+      card.classList.remove('zoomIn');
+      btn.classList.remove('zoomIn');
+    }, 1000);
+  }
+
+  // animate card out 
+  static animateCard() {
+
+    let card = document.querySelector('.currentFilm');
+    card.classList.remove('fadeInRight');
+    card.classList.add('fadeOutLeft');
+
+    setTimeout(() => {
+      card.classList.remove('fadeOutLeft');
+      card.classList.add('fadeInRight');
+    }, 1000);
+  }
+
+  // animate button on click
+  static animateBtn() {
+
+    let btn = document.querySelector('button');
+    btn.classList.add('pulse');
+
+    setTimeout(() => btn.classList.remove('pulse'), 1000);
   }
 }

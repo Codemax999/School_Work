@@ -19,9 +19,12 @@
       "testTsconfig": "tsconfig.spec.json",
       "prefix": "app",
       "styles": [
-        "styles.scss"
+        "styles.scss",
+        "../node_modules/spectre.css/dist/spectre.min.css",
+        "../node_modules/spectre.css/dist/spectre-exp.min.css",
+        "../node_modules/spectre.css/dist/spectre-icons.min.css"
       ],
-      "scripts": [],
+      "scripts": ["../node_modules/moment/moment.js"],
       "environmentSource": "environments/environment.ts",
       "environments": {
         "dev": "environments/environment.ts",

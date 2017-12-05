@@ -1,6 +1,56 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
+<div style="display: flex; flex-direction: column; align-items: center;">
+
+  <h1>Local Schedule</h1>
+
+
+  <!-- City Search Bar -->
+  <form [formGroup]="form" class="col-9">
+    <div class="input-group">
+
+      <input class="form-input" 
+        type="text" 
+        placeholder="Enter a city" 
+        formControlName="city" 
+        [(ngModel)]="city">
+
+      <button class="btn btn-primary input-group-btn" (click)="getSchedule()">
+        Search
+      </button>
+
+    </div>
+  </form>
+
+
+  <!-- Loading -->
+  <div *ngIf="displayLoading" class="loading loading-lg"></div>
+
+
+  <!-- Schedule -->
+  <section *ngIf="schedule">
+    <li *ngFor="let x of schedule" style="list-style: none;">
+
+      <!-- Date -->
+      <h6 style="background: black; color: white;">{{ x[0] | date }}</h6>
+
+      <!-- Booked Event Names -->
+      <h6>BOOKED EVENTS:</h6>
+      <div *ngFor="let e of x[1]; let i = index">
+        <p style="font-size: 14px;">{{ e.name }}</p>
+
+        <!-- Availble Venue Names -->
+        <div *ngIf="i === x[1].length - 1">
+          <h6>AVAILABLE VENUES:</h6>
+          <p *ngFor="let v of filterVenues(x[1])" style="font-size: 12px;">{{ v.name }}</p>
+        </div>
+      </div>
+    </li>
+  </section>
+
+  
+  <!-- No Events Found -->
+  <section *ngIf="noEvents">
+    <span class="label label-error">No Events Found</span>
+    <h6>AVAILABLE VENUES:</h6>
+    <p *ngFor="let v of venues" style="font-size: 12px;">{{ v.name }}</p>
+  </section>
 </div>

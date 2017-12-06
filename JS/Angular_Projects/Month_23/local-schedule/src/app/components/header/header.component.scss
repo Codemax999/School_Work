@@ -1,0 +1,24 @@
+@import "../../../styles";
+
+header {
+  height: 64px;
+}
+
+.navbar-logo {
+  align-items: center;
+  display: flex;
+  margin: 0 25px;
+
+  img {
+    height: 43px;
+    width: 43px;
+  }
+}
+
+.navbar-search {
+  margin-right: 20px;
+}
+
+.form-input {
+  @extend %search-box;
+}

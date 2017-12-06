@@ -1,0 +1,24 @@
+@import "../../../styles";
+
+// --- Category Titles ---
+h4 {
+  font-weight: 700;
+  letter-spacing: .5px;
+  margin: 20px 20px 0 20px;
+}
+
+// --- Venues ---
+.results-venues article {
+  @extend %side-swipe;
+  height: 130px;
+
+  div {
+    height: 100px;
+    min-width: 150px;
+  }
+}
+
+// --- Timeline ---
+.timeline {
+  margin-top: 20px;
+}

@@ -1,1 +1,40 @@
-/* You can add global styles to this file, and also import other style files */
+// --- Colors ---
+$primary: #5755d9;
+
+
+// --- Placeholder ---
+// side swipe elements
+%side-swipe {
+  align-items: center;
+  display: flex;
+  overflow: scroll;
+
+  & div:nth-of-type(1) {
+    margin-left: 20px;
+  }
+
+  div {
+    background: lavender;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    margin: 0 5px;
+  }
+}
+
+// search box 
+%search-box {
+  font-size: 12px;
+  font-weight: 300;
+  letter-spacing: .5px;
+}
+
+
+// --- Mixins ---
+// media query
+@mixin mq($size) {
+  @if $size == small {
+    @media (min-width: 300px) { @content; }
+  }
+  @else if $size == large {
+    @media (min-width: 720px) { @content; }
+  }
+}

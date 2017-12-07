@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { FormGroup, FormControl, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-header',
@@ -6,6 +7,21 @@ import { Component } from '@angular/core';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent {
+
+  // --- Component Variables ---
+  form: FormGroup;
+  city: string = '';
+  
+
+  // --- LifeCycle ---
+  ngOnInit() {
+
+    // initialize form 
+    this.form = new FormGroup({
+      city: new FormControl(this.city, Validators.maxLength(50))
+    });
+  }
+
 
   // --- Show / Hide Header Search Bar ---
   // if on results page

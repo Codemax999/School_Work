@@ -7,7 +7,7 @@ $primary: #5755d9;
 %side-swipe {
   align-items: center;
   display: flex;
-  overflow: scroll;
+  overflow-y: scroll;
 
   & div:nth-of-type(1) {
     margin-left: 20px;

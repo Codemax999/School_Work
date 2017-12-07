@@ -1,8 +1,19 @@
-<!-- Venues -->
-<section class="results-venues">
+<!-- Loading -->
+<div class="loading loading-lg" *ngIf="displayLoading"></div>
 
-  <!-- Loading -->
-  <div *ngIf="displayLoading" class="loading loading-lg"></div>
+
+<!-- Empty State -->
+<div class="empty" *ngIf="!schedule.length && !displayLoading">
+  <div class="empty-icon">
+    <i class="icon icon-2x icon-location"></i>
+  </div>
+  <p class="empty-title h5">No venues or events found</p>
+  <p class="empty-subtitle">Try another city or check back later.</p>
+</div>
+
+
+<!-- Venues -->
+<section class="results-venues" *ngIf="schedule.length">
 
   <!-- Category -->
   <h4>Venues</h4>
@@ -19,20 +30,49 @@
 
 
 <!-- Schedule -->
-<section class="results-schedule">
+<section class="results-schedule" *ngIf="schedule.length">
 
   <!-- Category -->
   <h4>Schedule</h4>
 
+  <!-- Timeline -->
   <div class="timeline">
-
-    <div class="timeline-item" id="timeline-example-1">
+    <div class="timeline-item" *ngFor="let x of schedule">
       <div class="timeline-left">
-        <a class="timeline-icon" href="#timeline-example-1"></a>
+        <div class="timeline-icon"></div>
       </div>
+
       <div class="timeline-content">
-        <!-- tiles structure -->
-        Wednesday, December 6th 2017
+
+        <!-- date -->
+        <span class="text-primary">{{ x[0] | date }}</span>
+
+        <!-- Booked Events -->
+        <h6>Booked Events</h6>
+        <div class="booked-events" *ngFor="let e of x[1]; let i = index">
+
+          <!-- Booled Event Details -->
+          <div class="tile tile-centered">
+            <div class="tile-content">
+              <p class="tile-title">
+                {{ e.start_time | date: 'shortTime' }} @ {{ e.place.name }}
+              </p>
+              <p class="tile-subtitle text-gray">{{ e.name }}</p>
+            </div>
+          </div>
+        
+          <!-- Availble Venue Names -->
+          <div *ngIf="i === x[1].length - 1">
+
+            <h6>Available Venues</h6>
+            <article class="available-venues">
+              <div *ngFor="let v of filterVenues(x[1])">
+                 {{ v.name }}
+              </div>
+            </article>
+
+          </div>
+        </div>
       </div>
     </div>
   </div>

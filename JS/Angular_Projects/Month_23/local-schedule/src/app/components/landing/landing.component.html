@@ -1,7 +1,7 @@
 <section class="landing-search">
 
     <!-- Name and Greeting -->
-    <h3 [routerLink]="['results']">Sesh</h3>
+    <h3>Sesh</h3>
     <h5>Plan your next event by seeing what's going on around you or in a new area.</h5>
     
 
@@ -15,41 +15,14 @@
           formControlName="city" 
           [(ngModel)]="city">
     
-        <button class="btn btn-primary input-group-btn" (click)="getSchedule()">
+        <button class="btn btn-primary input-group-btn" 
+          type="button"
+          [routerLink]="['results']" 
+          [queryParams]="{city: city}">
           Search
         </button>
       </div>
     </form>      
-    
-    
-    <!-- Schedule -->
-    <article *ngIf="schedule">
-      <li *ngFor="let x of schedule" style="list-style: none;">
-    
-        <!-- Date -->
-        <h6 style="background: black; color: white;">{{ x[0] | date }}</h6>
-    
-        <!-- Booked Event Names -->
-        <h6>BOOKED EVENTS:</h6>
-        <div *ngFor="let e of x[1]; let i = index">
-          <p style="font-size: 14px;">{{ e.name }}</p>
-    
-          <!-- Availble Venue Names -->
-          <div *ngIf="i === x[1].length - 1">
-            <h6>AVAILABLE VENUES:</h6>
-            <p *ngFor="let v of filterVenues(x[1])" style="font-size: 12px;">{{ v.name }}</p>
-          </div>
-        </div>
-      </li>
-    </article>
-    
-    
-    <!-- No Events Found -->
-    <article *ngIf="noEvents">
-      <span class="label label-error">No Events Found</span>
-      <h6>AVAILABLE VENUES:</h6>
-      <p *ngFor="let v of venues" style="font-size: 12px;">{{ v.name }}</p>
-    </article>
 </section>
 
 
@@ -61,10 +34,25 @@
 
   <!-- List of Cities -->
   <article>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
+    <div [routerLink]="['results']" [queryParams]="{city: 'wynwood'}">
+      <img src="assets/city/wynwood.jpg" alt="wynwood">
+      <span>Wynwood</span>
+    </div>
+    <div [routerLink]="['results']" [queryParams]="{city: 'austin'}">
+      <img src="assets/city/austin.jpg" alt="austin">
+      <span>Austin</span>
+    </div>
+    <div [routerLink]="['results']" [queryParams]="{city: 'west palm beach'}">
+      <img src="assets/city/west_palm.jpg" alt="west palm">
+      <span>West Palm</span>
+    </div>
+    <div [routerLink]="['results']" [queryParams]="{city: 'portland'}">
+      <img src="assets/city/portland.jpg" alt="portland">
+      <span>Portland</span>
+    </div>
+    <div [routerLink]="['results']" [queryParams]="{city: 'san jose'}">
+      <img src="assets/city/san_jose.jpg" alt="san jose">
+      <span>San Jose</span>
+    </div>
   </article>
 </section>

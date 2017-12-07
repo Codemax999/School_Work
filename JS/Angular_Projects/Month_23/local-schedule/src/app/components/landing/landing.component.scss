@@ -40,7 +40,27 @@ form {
   height: 180px;
 
   div {
+    align-items: center;
+    display: flex;
     height: 150px;
-    min-width: 200px;
+    justify-content: center;
+    min-width: 225px;
+    position: relative;
+
+    img {
+      filter: brightness(75%);
+      height: 100%;
+      object-fit: cover;
+      width: 100%;
+    }
+
+    span {
+      color: #fff;
+      font-size: 25px;
+      font-weight: 300;
+      letter-spacing: .5px;
+      position: absolute;
+      text-shadow: 0 1px 0 black;
+    }
   }
 }

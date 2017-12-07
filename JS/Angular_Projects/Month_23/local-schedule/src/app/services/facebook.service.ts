@@ -25,24 +25,24 @@ export class FacebookService {
       let counter = 0;
       
       this.venueApi(path)
-        .then(res => {
+        // .then(res => {
 
-          if (res.venues) res.venues.map(x => venues.push(x));
-          if (res.nextPath) return this.venueApi(res.nextPath);
-          else return;
-        })
-        .then(res => {
+        //   if (res.venues) res.venues.map(x => venues.push(x));
+        //   if (res.nextPath) return this.venueApi(res.nextPath);
+        //   else return;
+        // })
+        // .then(res => {
 
-          if (res.venues) res.venues.map(x => venues.push(x));
-          if (res.nextPath) return this.venueApi(res.nextPath);
-          else return;
-        })
-        .then(res => {
+        //   if (res.venues) res.venues.map(x => venues.push(x));
+        //   if (res.nextPath) return this.venueApi(res.nextPath);
+        //   else return;
+        // })
+        // .then(res => {
 
-          if (res.venues) res.venues.map(x => venues.push(x));
-          if (res.nextPath) return this.venueApi(res.nextPath);
-          else return;
-        })
+        //   if (res.venues) res.venues.map(x => venues.push(x));
+        //   if (res.nextPath) return this.venueApi(res.nextPath);
+        //   else return;
+        // })
         // .then(res => {
 
         //   if (res.venues) res.venues.map(x => venues.push(x));

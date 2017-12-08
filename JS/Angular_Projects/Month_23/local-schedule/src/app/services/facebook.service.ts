@@ -22,7 +22,6 @@ export class FacebookService {
       const path = `https://graph.facebook.com/v2.11/search?type=place&center=${center}&distance=${distance}&fields=${fields}&access_token=${key}`;
 
       let venues = [];
-      let counter = 0;
       
       this.venueApi(path)
         // .then(res => {
@@ -99,11 +98,31 @@ export class FacebookService {
         venue.map((x, i) => {
 
           // Page Categories
-          const verifyType = ['Bar','Dance & Night Club','Lounge','Cocktail Bar','Live Music Venue'];
+          const verifyType = [
+            'Live Music Venue',
+            'Dance & Night Club',
+            'Bar',
+            'Lounge',
+            'Cocktail Bar'
+          ];
 
           // get all events if venue is correct category
           const verify = x.category_list.map(category => verifyType.includes(category.name));
-          if (verify.includes(true)) venues.push(x);
+          if (verify.includes(true)) {
+
+            // add images to venues
+            const venueImages = [
+              'assets/venue/live_music.jpg',
+              'assets/venue/club.jpg',
+              'assets/venue/bar.jpg',
+              'assets/venue/lounge.jpg',
+              'assets/venue/lounge.jpg'
+            ];
+
+            const imgIndex = verify.indexOf(true);
+            x.img = venueImages[imgIndex]
+            venues.push(x);
+          }
 
           // return
           if (i === venue.length - 1) {

@@ -13,67 +13,13 @@
 
 
 <!-- Venues -->
-<section class="results-venues" *ngIf="schedule.length">
-
-  <!-- Category -->
-  <h4>Venues</h4>
-
-  <!-- List of Venues -->
-  <article>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-  </article>
-</section>
+<app-venues *ngIf="schedule.length"
+  [venues]="venues">
+</app-venues>
 
 
 <!-- Schedule -->
-<section class="results-schedule" *ngIf="schedule.length">
-
-  <!-- Category -->
-  <h4>Schedule</h4>
-
-  <!-- Timeline -->
-  <div class="timeline">
-    <div class="timeline-item" *ngFor="let x of schedule">
-      <div class="timeline-left">
-        <div class="timeline-icon"></div>
-      </div>
-
-      <div class="timeline-content">
-
-        <!-- date -->
-        <span class="text-primary">{{ x[0] | date }}</span>
-
-        <!-- Booked Events -->
-        <h6>Booked Events</h6>
-        <div class="booked-events" *ngFor="let e of x[1]; let i = index">
-
-          <!-- Booled Event Details -->
-          <div class="tile tile-centered">
-            <div class="tile-content">
-              <p class="tile-title">
-                {{ e.start_time | date: 'shortTime' }} @ {{ e.place.name }}
-              </p>
-              <p class="tile-subtitle text-gray">{{ e.name }}</p>
-            </div>
-          </div>
-        
-          <!-- Availble Venue Names -->
-          <div *ngIf="i === x[1].length - 1">
-
-            <h6>Available Venues</h6>
-            <article class="available-venues">
-              <div *ngFor="let v of filterVenues(x[1])">
-                 {{ v.name }}
-              </div>
-            </article>
-
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+<app-timeline *ngIf="schedule.length" 
+  [venues]="venues" 
+  [schedule]="schedule">
+</app-timeline>

@@ -62,11 +62,4 @@ export class ResultsComponent {
         this.displayLoading = false;
       });
   }
-
-  // remove venues that are booked
-  filterVenues(venues: Array<any>): Array<any> {
-
-    venues = venues.map(x => x.place.name);
-    return this.venues.filter(x => !venues.includes(x.name));
-  }
 }

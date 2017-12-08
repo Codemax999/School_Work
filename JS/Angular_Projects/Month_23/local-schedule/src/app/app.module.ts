@@ -11,6 +11,9 @@ import { FacebookService } from './services/facebook.service';
 import { HeaderComponent } from './components/header/header.component';
 import { LandingComponent } from './components/landing/landing.component';
 import { ResultsComponent } from './components/results/results.component';
+import { CitiesComponent } from './components/cities/cities.component';
+import { TimelineComponent } from './components/timeline/timeline.component';
+import { VenuesComponent } from './components/venues/venues.component';
 
 
 @NgModule({
@@ -18,7 +21,10 @@ import { ResultsComponent } from './components/results/results.component';
     AppComponent,
     HeaderComponent,
     LandingComponent,
-    ResultsComponent
+    ResultsComponent,
+    CitiesComponent,
+    TimelineComponent,
+    VenuesComponent
   ],
   imports: [
     BrowserModule,

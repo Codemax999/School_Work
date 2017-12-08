@@ -1,0 +1,8 @@
+<!-- List of Venues -->
+<h4>Venues</h4>
+<article>
+  <div *ngFor="let x of venues">
+    <img [src]="x.img" alt="x.name">
+    <span>{{ x.name }}</span>
+  </div>
+</article>

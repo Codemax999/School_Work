@@ -6,24 +6,7 @@
   </section>
 
   <!-- Search Bar for Results page -->
-  <section class="navbar-section navbar-search" *ngIf="searchBar()">
-
-    <form [formGroup]="form" class="col-12">
-      <div class="input-group">
-      
-        <input class="form-input" 
-          type="text" 
-          placeholder="Try 'Wynwood'" 
-          formControlName="city" 
-          [(ngModel)]="city">
-      
-        <button class="btn btn-primary input-group-btn" 
-          type="button" 
-          [routerLink]="['results']" 
-          [queryParams]="{city: city}">
-          Search
-        </button>
-      </div>
-    </form>
+  <section class="navbar-section" *ngIf="searchBar()">
+    <app-search class="col-md-12 col-6"></app-search>
   </section>
 </header>

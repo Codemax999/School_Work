@@ -1,14 +1,15 @@
-<!-- Category -->
-<h4>Suggested</h4>
-
 <!-- List of Cities -->
-<article>
-  <div *ngFor="let x of cities" 
-    [routerLink]="['results']"
-    [queryParams]="{city: x.name}">
+<section class="col-sm-12 col-10">
 
-    <img [src]="x.img" alt="x.name">
-    <span>{{ x.name }}</span>
-    
-  </div>
-</article>
+  <h4>Suggested</h4>
+  <article>
+    <div *ngFor="let x of cities" 
+      [routerLink]="['results']"
+      [queryParams]="{city: x.name}">
+
+      <img [src]="x.img" alt="x.name">
+      <span>{{ x.name }}</span>
+      
+    </div>
+  </article>
+</section>

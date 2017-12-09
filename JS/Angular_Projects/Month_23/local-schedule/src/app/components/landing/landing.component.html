@@ -1,28 +1,11 @@
-<section class="landing-search">
+<section class="col-sm-12 col-8">
 
     <!-- Name and Greeting -->
     <h3>Sesh</h3>
     <h5>Plan your next event by seeing what's going on around you or in a new area.</h5>
     
-
     <!-- City Search Bar -->
-    <form [formGroup]="form" class="col-12">
-      <div class="input-group">
-    
-        <input class="form-input" 
-          type="text" 
-          placeholder="Try 'West Palm Beach'" 
-          formControlName="city" 
-          [(ngModel)]="city">
-    
-        <button class="btn btn-primary input-group-btn" 
-          type="button"
-          [routerLink]="['results']" 
-          [queryParams]="{city: city}">
-          Search
-        </button>
-      </div>
-    </form>      
+    <app-search class="col-md-12"></app-search>   
 </section>
 
 

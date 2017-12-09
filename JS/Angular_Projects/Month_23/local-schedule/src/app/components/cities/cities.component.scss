@@ -1,10 +1,22 @@
 @import "../../../styles";
 
 // --- Suggested Cities ---
+section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 20px;
+}
+
 h4 {
   font-weight: 700;
   letter-spacing: .5px;
-  margin: 0 20px;
+
+  // medium and up
+  @include mq(medium) {
+    font-size: 30px !important;
+  }
 }
 
 article {

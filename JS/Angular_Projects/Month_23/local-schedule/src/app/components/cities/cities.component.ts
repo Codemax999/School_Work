@@ -20,12 +20,25 @@ export class CitiesComponent {
   ngOnInit() {
     
     // add cities and images to cities array
-    const cityNames = ['Wynwood', 'Austin', 'West Palm Beach', 'Portland', 'San Jose'];
+    const cityNames = [
+      'Wynwood', 
+      'Austin', 
+      'West Palm Beach', 
+      'Tokyo',
+      'Portland', 
+      'Sydney',
+      'Vancouver',
+      'San Jose',
+    ];
+    
     const cityImgPaths = [
       'assets/city/wynwood.jpg',
       'assets/city/austin.jpg',
       'assets/city/west_palm.jpg',
+      'assets/city/tokyo.jpg',
       'assets/city/portland.jpg',
+      'assets/city/sydney.jpg',
+      'assets/city/vancouver.jpg',
       'assets/city/san_jose.jpg',
     ];
 

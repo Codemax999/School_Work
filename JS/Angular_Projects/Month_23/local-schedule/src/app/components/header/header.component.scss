@@ -1,7 +1,6 @@
-@import "../../../styles";
-
 header {
-  height: 64px;
+  height: 80px;
+  display: flex;
 }
 
 .navbar-logo {
@@ -15,10 +14,8 @@ header {
   }
 }
 
-.navbar-search {
+.navbar-section {
+  display: flex;
+  justify-content: flex-start !important;
   margin-right: 20px;
-}
-
-.form-input {
-  @extend %search-box;
 }

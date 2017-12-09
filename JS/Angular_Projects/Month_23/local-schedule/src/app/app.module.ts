@@ -14,7 +14,7 @@ import { ResultsComponent } from './components/results/results.component';
 import { CitiesComponent } from './components/cities/cities.component';
 import { TimelineComponent } from './components/timeline/timeline.component';
 import { VenuesComponent } from './components/venues/venues.component';
-
+import { SearchComponent } from './components/search/search.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +24,8 @@ import { VenuesComponent } from './components/venues/venues.component';
     ResultsComponent,
     CitiesComponent,
     TimelineComponent,
-    VenuesComponent
+    VenuesComponent,
+    SearchComponent
   ],
   imports: [
     BrowserModule,

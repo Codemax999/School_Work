@@ -12,14 +12,23 @@
 </div>
 
 
-<!-- Venues -->
-<app-venues *ngIf="schedule.length"
-  [venues]="venues">
-</app-venues>
+<!-- Results -->
+<section class="container">
+  <div class="columns">
+
+    <!-- Venues -->
+    <app-venues *ngIf="schedule.length"
+      [venues]="venues"
+      class="col-md-12 col-6">
+    </app-venues>
 
 
-<!-- Schedule -->
-<app-timeline *ngIf="schedule.length" 
-  [venues]="venues" 
-  [schedule]="schedule">
-</app-timeline>
+    <!-- Schedule -->
+    <app-timeline *ngIf="schedule.length" 
+      [venues]="venues" 
+      [schedule]="schedule"
+      class="col-md-12 col-6">
+    </app-timeline>
+
+  </div>
+</section>

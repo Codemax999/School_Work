@@ -1,0 +1,11 @@
+@import "../../../styles";
+
+// Venues and Schedule Container
+.columns {
+
+  // medium and up
+  @include mq(medium) { 
+    margin: 0 auto;
+    width: 90vw;
+  } 
+}

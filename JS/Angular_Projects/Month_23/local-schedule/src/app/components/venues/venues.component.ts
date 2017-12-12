@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { Venue } from '../../interfaces/venue';
 
 @Component({
   selector: 'app-venues',
@@ -8,6 +9,5 @@ import { Component, Input } from '@angular/core';
 export class VenuesComponent {
 
   // --- Component Variables ---
-  @Input() venues: Array<any>;
-
+  @Input() venues: Array<Venue>;
 }

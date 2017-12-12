@@ -1,9 +1,5 @@
 import { Component } from '@angular/core';
-
-interface City {
-  name: string,
-  img: string
-};
+import { City } from '../../interfaces/city';
 
 @Component({
   selector: 'app-cities',
@@ -49,7 +45,7 @@ export class CitiesComponent {
         img: cityImgPaths[i]
       };
 
-      this.cities.push(newCity);
-    });
+      this.cities = [...this.cities, newCity];
+    });    
   }
 }

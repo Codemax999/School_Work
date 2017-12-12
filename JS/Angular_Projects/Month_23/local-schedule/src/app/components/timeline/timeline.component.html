@@ -10,10 +10,10 @@
     <div class="timeline-content">
 
       <!-- date -->
-      <span class="text-primary">{{ x[0] | date }}</span>
+      <span class="text-primary">{{ x.date | date }}</span>
 
       <!-- Booked Events -->
-      <div class="booked-events" *ngFor="let e of x[1]; let i = index">
+      <div class="booked-events" *ngFor="let e of x.events; let i = index">
 
         <!-- Booled Event Details -->
         <div class="tile tile-centered">

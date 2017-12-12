@@ -2,6 +2,9 @@ import { Component } from '@angular/core';
 import { ActivatedRoute } from "@angular/router";
 import { GoogleService } from '../../services/google.service';
 import { FacebookService } from '../../services/facebook.service';
+import { Event } from '../../interfaces/event';
+import { Venue } from '../../interfaces/venue';
+import { Schedule } from '../../interfaces/schedule';
 
 @Component({
   selector: 'app-results',
@@ -12,9 +15,8 @@ export class ResultsComponent {
 
   // --- Component Variables ---
   displayLoading: boolean = false;
-  schedule: Array<any> = [];
-  venues: Array<any> = [];
-  booked: Array<string> = [];
+  schedule: Array<Schedule> = [];
+  venues: Array<Venue> = [];
   noEvents: boolean = false;
 
   
@@ -30,7 +32,7 @@ export class ResultsComponent {
 
 
   // --- Get Schedule ---
-  getSchedule(city: string) {
+  getSchedule(city: string): void {
 
     // reset no events and display loading
     this.noEvents = false;
@@ -44,16 +46,14 @@ export class ResultsComponent {
       .then(this.facebook.sortEvents)
       .then(payload => {
 
-        console.log('FINISHED', payload);
         // hide loading
         this.displayLoading = false;
 
         // no events: show local venues
         if (!payload.allEvents.length) this.noEvents = true;
 
-        // events found: display schedule
-        const results = Array.from(payload.dates).sort((a, b) => a[0] - b[0]);
-        this.schedule = results;
+        // update arrays
+        this.schedule = payload.schedule;
         this.venues = payload.venues;
       })
       .catch(() => {

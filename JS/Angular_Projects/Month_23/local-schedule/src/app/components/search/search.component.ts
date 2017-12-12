@@ -25,6 +25,7 @@ export class SearchComponent {
 
   // --- Is Input in Header ---
   isHeader(): boolean {
+    
     if (window.location.pathname === '/results') return true;
     else return false;
   }

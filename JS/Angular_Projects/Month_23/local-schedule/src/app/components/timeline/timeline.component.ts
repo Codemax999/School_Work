@@ -1,4 +1,6 @@
 import { Component, Input } from '@angular/core';
+import { Venue } from '../../interfaces/venue';
+import { Schedule } from '../../interfaces/schedule';
 
 @Component({
   selector: 'app-timeline',
@@ -8,14 +10,6 @@ import { Component, Input } from '@angular/core';
 export class TimelineComponent {
 
   // --- Component Variables ---
-  @Input() venues: Array<any>;
-  @Input() schedule: Array<any>;
-
-
-  // remove venues that are booked
-  filterVenues(venues: Array<any>): Array<any> {
-
-    venues = venues.map(x => x.place.name);
-    return this.venues.filter(x => !venues.includes(x.name));
-  }
+  @Input() venues: Array<Venue>;
+  @Input() schedule: Array<Schedule>;
 }

@@ -236,4 +236,35 @@ export class FacebookService {
       });
     });
   }
+
+  // add event count to venues 
+  sortVenues(payload: FacebookResponse): Promise<FacebookResponse> {
+
+    return new Promise((resolve, reject) => {
+
+      payload.schedule.map((x, i) => {
+
+        x.events.map(eventArr => {
+
+          // get venue by id
+          let venueUpdate = payload.venues.filter(venue => venue.id === eventArr.place.id);
+
+          if (venueUpdate[0]) {
+            
+            let prevCount = venueUpdate[0].eventCount ? venueUpdate[0].eventCount : 0;
+            venueUpdate[0].eventCount = String(Number(prevCount) + 1);
+          }
+          console.log('here')
+        });
+
+        // sort venues by event count
+        if (i === payload.schedule.length - 1) {
+
+          payload.venues.map(venue => venue.eventCount = venue.eventCount === undefined ? '' : venue.eventCount);
+          payload.venues = payload.venues.sort((a, b) => Number(b.eventCount) - Number(a.eventCount));
+          return resolve(payload);
+        }
+      });
+    });
+  }
 }

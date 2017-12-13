@@ -5,4 +5,5 @@ export interface Venue {
   id: string;
   img: string;
   name: string;
+  eventCount: string;
 }

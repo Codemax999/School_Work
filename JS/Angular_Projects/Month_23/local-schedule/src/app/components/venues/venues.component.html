@@ -1,9 +1,15 @@
 <!-- List of Venues -->
 <h4>Venues</h4>
 <article>
-  <div *ngFor="let x of venues" (click)="showModal(x)">
+  <div class="badge" 
+    id="venue-{{ x.id }}"
+    data-badge=""
+    *ngFor="let x of venues" 
+    (click)="showModal(x)">
+
     <img [src]="x.img" alt="x.name">
     <span>{{ x.name }}</span>
+
   </div>
 </article>
 

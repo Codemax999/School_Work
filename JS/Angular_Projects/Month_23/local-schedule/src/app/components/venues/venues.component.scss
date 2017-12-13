@@ -5,6 +5,17 @@ h4 {
   @extend %results-header;
 }
 
+// --- Badge ---
+.badge {
+  white-space: normal;
+}
+
+.badge[data-badge]::after {
+  position: absolute;
+  top: 5px;
+  right: 0;
+}
+
 // --- Venues ---
 article {
   @extend %side-swipe;

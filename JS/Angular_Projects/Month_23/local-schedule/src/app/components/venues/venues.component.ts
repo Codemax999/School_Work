@@ -15,9 +15,21 @@ export class VenuesComponent {
   @ViewChild(ModalComponent) modalComponent: ModalComponent;
   @Input() venues: Array<Venue>;
   @Input() schedule: Array<Schedule>;
+  modalSchedule: Array<Schedule> = [];
   modalName: string = '';
   modalPlace: string = '';
-  modalSchedule: Array<Schedule> = [];
+
+
+  // --- Update Data Badges ---
+  dataLoaded(): void {
+
+    // get badge
+    this.venues.map(x => {
+
+      const badge = document.querySelector(`#venue-${x.id}`);
+      if (badge) badge.setAttribute('data-badge', x.eventCount);
+    });
+  }
 
 
   // --- Filter Schedule for Modals ---

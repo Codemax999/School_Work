@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
+import { VenuesComponent } from '../../components/venues/venues.component';
 import { ActivatedRoute } from "@angular/router";
 import { GoogleService } from '../../services/google.service';
 import { FacebookService } from '../../services/facebook.service';
@@ -14,10 +15,11 @@ import { Schedule } from '../../interfaces/schedule';
 export class ResultsComponent {
 
   // --- Component Variables ---
+  @ViewChild(VenuesComponent) venuesComponent: VenuesComponent;
   displayLoading: boolean = false;
+  noEvents: boolean = false;
   schedule: Array<Schedule> = [];
   venues: Array<Venue> = [];
-  noEvents: boolean = false;
 
   
   // --- Constructor ---
@@ -44,6 +46,7 @@ export class ResultsComponent {
       .then(this.facebook.buildEventPaths)
       .then(this.facebook.getAllEvents)
       .then(this.facebook.sortEvents)
+      .then(this.facebook.sortVenues)
       .then(payload => {
         console.log(payload);
         // hide loading
@@ -55,8 +58,13 @@ export class ResultsComponent {
         // update arrays
         this.schedule = payload.schedule;
         this.venues = payload.venues;
+
+        // data loaded
+        setTimeout(() => this.venuesComponent.dataLoaded(), 100);
       })
-      .catch(() => {
+      .catch(err => {
+
+        console.error(err);
 
         // location not found
         this.displayLoading = false;

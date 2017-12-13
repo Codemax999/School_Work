@@ -1,4 +1,4 @@
 export interface City {
-  name: string,
-  img: string
+  name: string;
+  img: string;
 }

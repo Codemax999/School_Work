@@ -1,5 +1,10 @@
 @import "../../../styles";
 
+// --- Hide Scrollbar ---
+::-webkit-scrollbar { 
+    display: none; 
+}
+
 // --- Category Titles ---
 h4 {
   @extend %results-header;

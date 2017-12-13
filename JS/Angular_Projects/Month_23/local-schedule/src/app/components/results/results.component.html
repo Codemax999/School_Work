@@ -17,17 +17,17 @@
   <div class="columns">
 
     <!-- Venues -->
-    <app-venues *ngIf="schedule.length"
+    <app-venues class="col-md-12 col-6"
+      *ngIf="schedule.length"
       [venues]="venues"
-      class="col-md-12 col-6">
+      [schedule]="schedule">
     </app-venues>
 
 
     <!-- Schedule -->
-    <app-timeline *ngIf="schedule.length" 
-      [venues]="venues" 
-      [schedule]="schedule"
-      class="col-md-12 col-6">
+    <app-timeline class="col-md-12 col-6"
+      *ngIf="schedule.length" 
+      [schedule]="schedule">
     </app-timeline>
 
   </div>

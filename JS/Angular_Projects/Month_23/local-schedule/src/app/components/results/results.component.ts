@@ -45,7 +45,7 @@ export class ResultsComponent {
       .then(this.facebook.getAllEvents)
       .then(this.facebook.sortEvents)
       .then(payload => {
-
+        console.log(payload);
         // hide loading
         this.displayLoading = false;
 

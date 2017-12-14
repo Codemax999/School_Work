@@ -5,7 +5,8 @@
   <article>
     <div *ngFor="let x of cities" 
       [routerLink]="['results']"
-      [queryParams]="{city: x.name}">
+      [queryParams]="{city: x.name}"
+      (click)="setCity(x.name)">
 
       <img [src]="x.img" alt="x.name">
       <span>{{ x.name }}</span>

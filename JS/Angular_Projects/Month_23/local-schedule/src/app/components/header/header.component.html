@@ -2,7 +2,9 @@
 
   <!-- Logo / Return to Home -->
   <section class="navbar-logo">
-    <img src="assets/schedule.svg" [routerLink]="['/']">
+    <img src="assets/schedule.svg" 
+      [routerLink]="['/']"
+      (click)="resetCity()">
   </section>
 
   <!-- Search Bar for Results page -->

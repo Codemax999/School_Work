@@ -20,7 +20,7 @@ export class ResultsComponent {
   noEvents: boolean = false;
   schedule: Array<Schedule> = [];
   venues: Array<Venue> = [];
-
+  
   
   // --- Constructor ---
   constructor(

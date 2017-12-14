@@ -14,16 +14,26 @@ h4 {
 .timeline {
   margin-top: 20px;
 
-  // medium and up
-  @include mq(large) { 
-    height: calc(100vh - 100px);
-    overflow: scroll;
+  // large and up
+  @include mq(medium) { 
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: scroll;
   } 
 }
 
 .tile-centered {
-  letter-spacing: .5px;
   font-weight: 300;
   margin: 20px 0;
   width: 91vw;
+}
+
+.tile-title {
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.tile-subtitle {
+  letter-spacing: .5px;
+  margin-top: 4px;
 }

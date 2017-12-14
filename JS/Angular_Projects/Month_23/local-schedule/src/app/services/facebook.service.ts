@@ -3,6 +3,7 @@ import { Http } from '@angular/http';
 import { FacebookResponse } from '../interfaces/facebook-response';
 import { VenuePagination } from '../interfaces/venue-pagination';
 import { Schedule } from '../interfaces/schedule';
+import { Place } from '../interfaces/place';
 
 @Injectable()
 export class FacebookService {
@@ -246,15 +247,16 @@ export class FacebookService {
 
         x.events.map(eventArr => {
 
+          // add defaults for any event without place details
+          eventArr.place = eventArr.place ? eventArr.place : <Place> { id: '0', name: 'No Name' };
+
           // get venue by id
           let venueUpdate = payload.venues.filter(venue => venue.id === eventArr.place.id);
-
           if (venueUpdate[0]) {
             
             let prevCount = venueUpdate[0].eventCount ? venueUpdate[0].eventCount : 0;
             venueUpdate[0].eventCount = String(Number(prevCount) + 1);
           }
-          console.log('here')
         });
 
         // sort venues by event count

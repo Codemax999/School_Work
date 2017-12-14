@@ -1,11 +1,27 @@
 @import "../../../styles";
 
+// --- Hide Scrollbar ---
+::-webkit-scrollbar { 
+    display: none; 
+}
+
+.container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: center;
+  width: 100vw;
+}
+
+.loading {
+  align-self: center;
+}
+
 // Venues and Schedule Container
 .columns {
-
-  // medium and up
-  @include mq(medium) { 
-    margin: 0 auto;
-    width: 90vw;
-  } 
+  height: 100vh;
+  margin: 0 auto;
+  overflow: scroll;
+  width: 90vw;
 }

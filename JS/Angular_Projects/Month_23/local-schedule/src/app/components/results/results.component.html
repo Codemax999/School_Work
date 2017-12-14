@@ -1,23 +1,18 @@
-<!-- Loading -->
-<div class="loading loading-lg" *ngIf="displayLoading"></div>
-
-
-<!-- Empty State -->
-<div class="empty" *ngIf="!schedule.length && !displayLoading">
-  <div class="empty-icon">
-    <i class="icon icon-2x icon-location"></i>
-  </div>
-  <p class="empty-title h5">No venues or events found</p>
-  <p class="empty-subtitle">Try another city or check back later.</p>
-</div>
-
-
-<!-- Results -->
 <section class="container">
-  <div class="columns">
+
+  <!-- Loading -->
+  <div class="loading loading-lg" *ngIf="displayLoading"></div>
+  
+  
+  <!-- Empty State -->
+  <app-empty *ngIf="!schedule.length && !displayLoading"></app-empty>
+
+
+  <!-- Results -->
+  <div class="columns" *ngIf="schedule.length">
 
     <!-- Venues -->
-    <app-venues class="col-md-12 col-6"
+    <app-venues class="col-sm-12 col-6"
       *ngIf="schedule.length"
       [venues]="venues"
       [schedule]="schedule">
@@ -25,7 +20,7 @@
 
 
     <!-- Schedule -->
-    <app-timeline class="col-md-12 col-6"
+    <app-timeline class="col-sm-12 col-6"
       *ngIf="schedule.length" 
       [schedule]="schedule">
     </app-timeline>

@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { City } from '../../interfaces/city';
+import { CityService } from '../../services/city.service';
 
 @Component({
   selector: 'app-cities',
@@ -10,6 +11,10 @@ export class CitiesComponent {
 
   // --- Component Variables ---
   cities: Array<City> = [];
+
+
+  // --- Constructor ---
+  constructor(public currentCity: CityService) { }
 
 
   // --- LifeCycle ---
@@ -47,5 +52,12 @@ export class CitiesComponent {
 
       this.cities = [...this.cities, newCity];
     });    
+  }
+
+
+  // --- Set City to placeholder ---
+  setCity(city: string): void {
+
+    this.currentCity.city = city;
   }
 }

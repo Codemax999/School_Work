@@ -13,7 +13,8 @@
     <button class="btn btn-primary input-group-btn" 
       type="button" 
       [routerLink]="['results']" 
-      [queryParams]="{city: city}">
+      [queryParams]="{city: city}"
+      (click)="setCity(city)">
       Search
     </button>
   </div>

@@ -8,6 +8,8 @@ import { AppComponent } from './app.component';
 
 import { GoogleService } from './services/google.service';
 import { FacebookService } from './services/facebook.service';
+import { CityService } from './services/city.service';
+
 import { HeaderComponent } from './components/header/header.component';
 import { LandingComponent } from './components/landing/landing.component';
 import { ResultsComponent } from './components/results/results.component';
@@ -16,6 +18,8 @@ import { TimelineComponent } from './components/timeline/timeline.component';
 import { VenuesComponent } from './components/venues/venues.component';
 import { SearchComponent } from './components/search/search.component';
 import { ModalComponent } from './components/modal/modal.component';
+import { EmptyComponent } from './components/empty/empty.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +31,9 @@ import { ModalComponent } from './components/modal/modal.component';
     TimelineComponent,
     VenuesComponent,
     SearchComponent,
-    ModalComponent
+    ModalComponent,
+    EmptyComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
@@ -37,7 +43,8 @@ import { ModalComponent } from './components/modal/modal.component';
   ],
   providers: [
     GoogleService,
-    FacebookService
+    FacebookService,
+    CityService
   ],
   bootstrap: [AppComponent]
 })

@@ -1,5 +1,10 @@
 @import "../../../styles";
 
+// --- Hide Scrollbar ---
+::-webkit-scrollbar { 
+    display: none; 
+}
+
 // --- Category Titles ---
 h4 {
   @extend %results-header;
@@ -36,9 +41,11 @@ article {
 
   // medium and up
   @include mq(medium) { 
+    align-items: flex-start;
     flex-wrap: wrap;
-    height: auto;
+    height: 100vh;
     margin-top: 20px;
+    overflow: scroll;
     
     div {
       margin: 7px;

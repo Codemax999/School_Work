@@ -35,6 +35,7 @@ $primary: #5755d9;
   align-items: center;
   display: flex;
   overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
 
   div {
     background: #F8F9FA;

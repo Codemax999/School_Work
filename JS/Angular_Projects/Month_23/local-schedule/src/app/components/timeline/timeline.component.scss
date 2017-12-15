@@ -17,12 +17,13 @@ h4 {
 
 .timeline {
   margin-top: 20px;
+  overflow-x: hidden;
 
   // large and up
   @include mq(medium) { 
     height: 100%;
-    overflow-x: hidden;
     overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
   } 
 }
 

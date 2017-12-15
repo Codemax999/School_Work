@@ -1,6 +1,7 @@
 @import "../../../styles";
 
-section {
+
+article {
   display: flex;
   flex-direction: column;
   height: 70vh;
@@ -13,12 +14,14 @@ section {
     color: $primary;
     font-weight: 700;
     letter-spacing: .5px;
+    transition: font-size 1s;
   }
 
   h5 {
     font-weight: 200;
     letter-spacing: .5px;
     padding-bottom: 20px;
+    transition: font-size 1s;
   }
 
   // medium and up

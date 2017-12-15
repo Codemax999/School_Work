@@ -1,6 +1,13 @@
 header {
-  height: 80px;
   display: flex;
+  height: 80px;
+  width: 100%;
+}
+
+.search {
+  background: #fff;
+  position: fixed;
+  z-index: 2;
 }
 
 .navbar-logo {

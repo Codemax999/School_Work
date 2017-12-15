@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { Schedule } from '../../interfaces/schedule';
+import { TimelineComponent } from '../../components/timeline/timeline.component';
 
 @Component({
   selector: 'app-modal',

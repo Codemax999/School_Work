@@ -22,6 +22,7 @@ $primary: #5755d9;
   font-weight: 700;
   letter-spacing: .5px;
   margin: 20px 20px 0 20px;
+  transition: font-size 1s;
 
   // medium and up
   @include mq(medium) {
@@ -62,4 +63,18 @@ $primary: #5755d9;
     position: absolute;
     text-shadow: 0 1px 0 black;
   }
+}
+
+
+// --- Animations ---
+.burst { 
+  -webkit-animation: fadeIn .3s linear forwards; // Safari & Chrome
+  -moz-animation: fadeIn .3s linear forwards; // Firefox
+  -ms-animation: fadeIn .3s linear forwards; // Internet Explorer
+  -o-animation: fadeIn .3s linear forwards; // Opera 
+  animation: fadeIn .3s linear forwards; 
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }

@@ -3,6 +3,7 @@
 
   <h4>Suggested</h4>
   <article>
+    
     <div *ngFor="let x of cities" 
       [routerLink]="['results']"
       [queryParams]="{city: x.name}"

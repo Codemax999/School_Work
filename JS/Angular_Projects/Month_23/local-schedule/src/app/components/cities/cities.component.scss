@@ -12,6 +12,7 @@ section {
 h4 {
   font-weight: 700;
   letter-spacing: .5px;
+  transition: font-size 1s;
 
   // medium and up
   @include mq(medium) {

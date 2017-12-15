@@ -11,12 +11,16 @@ h4 {
 }
 
 // --- Timeline ---
+.timeline-initial {
+  opacity: 0;
+}
+
 .timeline {
   margin-top: 20px;
 
   // large and up
   @include mq(medium) { 
-    height: 100vh;
+    height: 100%;
     overflow-x: hidden;
     overflow-y: scroll;
   } 

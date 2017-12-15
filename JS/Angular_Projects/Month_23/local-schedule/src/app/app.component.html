@@ -2,9 +2,13 @@
 <app-header></app-header>
 
 
-<!-- Routes -->
-<router-outlet></router-outlet>
+<section [ngClass]="{'search': searchBar()}">
+
+  <!-- Routes -->
+  <router-outlet></router-outlet>
 
 
-<!-- Footer -->
-<app-footer></app-footer>
+  <!-- Footer -->
+  <app-footer></app-footer>
+
+</section>

@@ -29,6 +29,9 @@ export class VenuesComponent {
       const badge = document.querySelector(`#venue-${x.id}`);
       if (badge) badge.setAttribute('data-badge', x.eventCount);
     });
+
+    // animate in
+    document.querySelector('.venues-container').classList.add('burst');
   }
 
 

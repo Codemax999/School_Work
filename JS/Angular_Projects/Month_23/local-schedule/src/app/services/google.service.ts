@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 @Injectable()
 export class GoogleService {
   
-  // --- [City to Lat Lng] ---
+  // --- City to Lat Lng ---
   geoLocate = (city: string): Promise<Array<number>> => {
 
     return new Promise((resolve, reject) => {

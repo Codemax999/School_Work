@@ -1,6 +1,6 @@
 <?
 
 // app start
-include 'bin/config.php';
+include 'initialize/config.php';
 
 ?>

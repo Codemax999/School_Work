@@ -1,6 +1,6 @@
 # Full Sail University
 
-C#, Python, JS (JQuery, Angular, React, React Native), SASS, GULP, HTML
+C#, Python, PHP, JS/TS (JQuery, Angular, React, React Native), SASS, GULP, HTML, CSS
 
 ## Author
 

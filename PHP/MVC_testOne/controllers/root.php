@@ -1,33 +1,20 @@
 <?
 
-class Welcome extends AppController {
+class Root extends AppController {
 
   public function __construct() {
 
-    $this->setHeader();
-    $this->setBody();
-    $this->setFooter();
-  }
-
-  public function setHeader() {
-
+    // Header Links 
     $menuLabels = array(
+      'welcome' => 'Welcome',
       'about' => 'About',
-      'hisoty' => 'History',
       'team' => 'Team',
       'contact' => 'Contact'
     );
 
+    // Header, Body and Footer
     $this->getView('navigation', $menuLabels);
-  }
-
-  public function setBody() {
-
     $this->getView('body');
-  }
-
-  public function setFooter() {
-
     $this->getView('footer');
   }
 }

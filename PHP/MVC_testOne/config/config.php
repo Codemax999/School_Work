@@ -1,7 +1,7 @@
 <?
 
 $config = array(
-  'defaultController' => 'root',
+  'defaultController' => 'main',
   'dbname' => 'fruits',
   'dbpass' => 'root',
   'dbuser' => 'root',

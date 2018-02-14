@@ -1,143 +1,64 @@
 <main role="main" class="container">
 
-  <!-- Basic Form -->
-  <h1 style="padding-top: 50px;">Basic Form</h1>
-  <form class="col-md-10" action="/main/contactRecv" method="POST">
-    <div class="form-row">
+  <!-- Captcha Form -->
+  <h1 style="padding-top: 50px;">Captcha Form</h1>
 
-      <!-- Input -->
-      <div class="form-group col-md-6">
-        <label for="exampleFormControlInput1">Email address</label>
-        <input type="email" 
-          name="email"
-          class="form-control" 
-          id="exampleFormControlInput1" 
-          placeholder="name@example.com">
-      </div>
+  <?
 
-      <!-- Select Box -->
-      <div class="form-group col-md-6">
-        <label for="exampleFormControlSelect1">Example select</label>
-        <select class="form-control" id="exampleFormControlSelect1">
-          <option>1</option>
-          <option>2</option>
-          <option>3</option>
-          <option>4</option>
-          <option>5</option>
-        </select>
-      </div>
-    </div>
+  function create_image($cap) {
 
-    <!-- Text Area -->
-    <div class="form-group">
-      <label for="exampleFormControlTextarea1">Example textarea</label>
-      <textarea class="form-control" 
-        name="description"
-        id="exampleFormControlTextarea1" 
-        rows="3"></textarea>
-    </div>
+    unlink("./assets/image1.png");
 
-    <div class="form-row">
+    global $image;
+    $image = imagecreatetruecolor(200, 50) or die("Cannot Initialize new GD image stream");
+    $background_color = imagecolorallocate($image, 255, 255, 255);
+    $text_color = imagecolorallocate($image, 0, 255, 255);
+    $line_color = imagecolorallocate($image, 64, 64, 64);
+    $pixel_color = imagecolorallocate($image, 0, 0, 255);
+    imagefilledrectangle($image, 0, 0, 200, 50, $background_color);
 
-      <!-- Radio -->
-      <div class="form-group col-md-3">
+    for ($i = 0; $i < 3; $i++) {
 
-        <div class="form-check">
-          <input class="form-check-input" 
-            type="radio" 
-            name="exampleRadios" 
-            id="exampleRadios1" 
-            value="option1" 
-            checked>
-          <label class="form-check-label" for="exampleRadios1">
-            Default
-          </label>
-        </div>
+      imageline($image, 0, rand() % 50, 200, rand() % 50, $line_color);
+    }
 
-        <div class="form-check">
-          <input class="form-check-input" 
-            type="radio" 
-            name="exampleRadios" 
-            id="exampleRadios2" 
-            value="option2">
-          <label class="form-check-label" for="exampleRadios2">
-            Second
-          </label>
-        </div>
-        
-        <div class="form-check disabled">
-          <input class="form-check-input" 
-            type="radio" 
-            name="exampleRadios" 
-            id="exampleRadios3" 
-            value="option3">
-          <label class="form-check-label" for="exampleRadios3">
-            Third
-          </label>
-        </div>
-      </div>
+    for ($i = 0; $i < 1000; $i++) {
 
-      <!-- Check Box -->
-      <div class="form-check col-md-3">
-        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-        <label class="form-check-label" for="defaultCheck1">
-          Default checkbox
-        </label>
-      </div>
+      imagesetpixel($image, rand() % 200, rand() % 50, $pixel_color);
+    }
 
-      <!-- Submit -->
-      <div class="col-md-3">
-        <button type="submit" class="btn btn-primary">Submit form</button>
-      </div>
-    </div>
-  </form>
+    $text_color = imagecolorallocate($image, 0, 0, 0);
+    ImageString($image, 22, 30, 22, $cap, $text_color);
+    $_SESSION['testCaptcha'] = $cap;
+    imagepng($image, "./assets/image1.png");
+  }
 
+  create_image($data["cap"]);
+  echo "<img src='../assets/image1.png'>";
+
+  ?>
 
   <!-- Login -->
-  <h1 style="padding-top: 50px;">Login Form</h1>
-  <form class="form-inline">
-    <div class="form-group mb-2">
-      <label for="staticEmail2" class="sr-only">Email</label>
-      <input type="text"
-        class="form-control-plaintext" 
-        id="staticEmail2" 
-        value="test@email.com"
-        readonly>
+  <form class="navbar-form navbar-right form-inline"
+    role="search"
+    method="post"
+    action="/main/contactRecv">
+
+    <div class="form-group">
+      <label for="exampleInputEmail1">Enter Captcha</label>
+      <input class="form-control" 
+        name="captcha" 
+        type="captcha" 
+        id="captcha">
     </div>
-    <div class="form-group mx-sm-3 mb-2">
-      <label for="password" class="sr-only">Password</label>
-      <input type="password" 
-        class="form-control" 
-        id="password" 
-        placeholder="Password"
-        required>
+
+    <div class="form-group">
+      <input type="text" 
+        class="form-control"
+        name="email"
+        placeholder="email">
     </div>
-    <input type="button" 
-      id="ajaxButton"
-      class="btn btn-primary mb-2" 
-      value="Login">
+
+    <button type="submit" class="btn btn-default">Login</button>
   </form>
 </main>
-
-
-<!-- JS -->
-<script src="../assets/js/jquery.min.js"></script>
-<script>
-  $(document).ready(() => {  
-
-    $('#ajaxButton').click(() => {
-
-      $.ajax({
-        method: 'POST',
-        url: '/main/ajaxPars',
-        data: { password: $('#password').val() },
-        success: msg => {
-
-          console.log(msg)
-          if (msg.includes('Welcome')) alert('Welcome')
-          else alert('Wrong')
-        } 
-      })
-    })
-  });
-</script>

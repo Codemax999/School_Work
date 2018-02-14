@@ -8,6 +8,11 @@ $config = array(
   'baseurl' => 'http://127.0.0.1'
 );
 
+// start session
+session_start();
+@$_SESSION['loggedin'];
+@$_SESSION['testCaptcha'];
+
 $str = "{$config['baseurl']}/{$_SERVER['REQUEST_URI']}";
 $urlPathParts = explode('/', ltrim(parse_url($str, PHP_URL_PATH), '/'));
 

@@ -16,15 +16,28 @@ class Main extends AppController {
 
     // Header, Body and Footer
     $this->getView('navigation', array('pagename' => 'Contact'));
-    $this->getView('contact');
-    $this->getView('footer');
+    $random = substr(md5(rand()), 0, 7);
+    $this->getView('contact',array('cap'=>$random));
   }
 
   public function contactRecv() {
 
-    if (!filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) echo 'Email Invalid';
-    else if ($_POST['description'] == NULL) echo 'Description Invalid';
-    else echo 'Email and Description Valid';
+    $this->getView('navigation');
+
+    if ($_REQUEST['captcha'] == $_SESSION['testCaptcha']) {
+
+      if (!filter_var($_POST['email'],FILTER_VALIDATE_EMAIL)) {
+
+        echo '<p>Email invalid</p>';
+        echo "<br><a href='/main/contact'>Click here to go back</a>";
+
+      } else echo '<p>Email valid</p>';
+
+    } else {
+
+      echo 'Invalid captcha';
+      echo "<br><a href='/main/contact'>Click here to go back</a>";
+    }
   }
 
   public function ajaxPars() {

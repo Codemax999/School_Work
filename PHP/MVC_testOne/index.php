@@ -7,7 +7,7 @@
     <meta name="author" content="">
     <title>Sticky Footer Navbar Template for Bootstrap</title>
   </head>
-  <body>
+  <body style="padding-top: 70px;">
       
     <!-- App Root -->
     <? include 'config/config.php'; ?>

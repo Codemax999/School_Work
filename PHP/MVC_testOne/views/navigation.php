@@ -5,7 +5,7 @@
 
   <!-- Fixed navbar -->
   <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-  
+
     <a class="navbar-brand" href="#">LOGO</a>
 
     <button class="navbar-toggler" 
@@ -30,14 +30,45 @@
           <a class='nav-link' href='/main/contact'>Contact</a>
         </li>
       </ul>
-      
-      <form class="form-inline mt-2 mt-md-0">
-        <input class="form-control mr-sm-2" 
-          type="text" 
-          placeholder="Search" 
-          aria-label="Search">
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-      </form>
+
+      <!-- Error Message -->
+      <span style="color: red">
+        <?=@$_REQUEST['msg'] ? $_REQUEST['msg'] : '';?>
+      </span>
+
+      <!-- Session Login / Logout -->
+      <? if (@$_SESSION['loggedin'] && @$_SESSION['loggedin'] == 1) { ?>
+
+        <form class="navbar-form navbar-right">
+          <a href="/profile">Profile</a>
+          <a href="/auth/logout">Logout</a>
+        </form>
+
+      <? } else { ?>
+
+        <form class="navbar-form navbar-right form-inline"
+          role="search"
+          method="post"
+          action="/auth/login">
+
+          <div class="form-group">
+            <input type="text" 
+              class="form-control"
+              name="username"
+              placeholder="username">
+          </div>
+
+          <div class="form-group">
+            <input type="text" 
+              class="form-control"
+              name="password"
+              placeholder="password">
+          </div>
+
+          <button type="submit" class="btn btn-default">Login</button>
+        </form>
+
+      <? } ?>
     </div>
   </nav>
 </header>

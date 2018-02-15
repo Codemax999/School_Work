@@ -54,8 +54,8 @@
           <div class="form-group">
             <input type="text" 
               class="form-control"
-              name="username"
-              placeholder="username">
+              name="email"
+              placeholder="email">
           </div>
 
           <div class="form-group">

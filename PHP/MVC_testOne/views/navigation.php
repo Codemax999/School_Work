@@ -1,5 +1,16 @@
-<!-- Bootstrap core CSS -->
-<link href="../assets/css/bootstrap.min.css" rel="stylesheet">
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <title>Sticky Footer Navbar Template for Bootstrap</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="../assets/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body style="padding-top: 70px;">
 
 <header>
 
@@ -18,13 +29,14 @@
       <span class="navbar-toggler-icon"></span>
     </button>
 
+    <!-- Navigation Links -->
     <div class="collapse navbar-collapse" id="navbarCollapse">
       <ul class="navbar-nav mr-auto">
         <li <?=@$data['pagename'] == 'Welcome' ? "class='active'": ''?>>
           <a class='nav-link' href='/main'>Welcome</a>
         </li>
-        <li <?=@$data['pagename'] == 'About' ? "class='active'": ''?>>
-          <a class='nav-link' href=''>About</a>
+        <li <?=@$data['pagename'] == 'about' ? "class='active'": ''?>>
+          <a class='nav-link' href='/about'>About</a>
         </li>
         <li <?=@$data['pagename'] == 'Contact' ? "class='active'": ''?>>
           <a class='nav-link' href='/main/contact'>Contact</a>

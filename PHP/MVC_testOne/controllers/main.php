@@ -17,7 +17,7 @@ class Main extends AppController {
     // Header, Body and Footer
     $this->getView('navigation', array('pagename' => 'Contact'));
     $random = substr(md5(rand()), 0, 7);
-    $this->getView('contact',array('cap'=>$random));
+    $this->getView('contact',array('cap' => $random));
   }
 
   public function contactRecv() {

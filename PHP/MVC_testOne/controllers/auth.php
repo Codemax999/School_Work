@@ -2,48 +2,36 @@
 
 class Auth extends AppController {
 
-  public function __construct() { }
+  public function __construct($parent) {
+    
+    $this->parent = $parent;
+  }
 
   public function login() {
 
-    // read file
-    $lines = file("./assets/test.txt");
+    // verify for email and password
+    if ($_REQUEST['email'] && $_REQUEST['password']) {
 
-    // get each email and password
-    foreach ($lines as $line) {
+      // check database for user
+      $data = $this->parent->getModel('users')->select(
+        'select * from users where email = :email and password = :password',
+        array(":email" => $_REQUEST['email'], "password" => sha1($_REQUEST['password']))
+      );
 
-      // get email and password from line
-      list($email, $password) = explode('|', $line);
+      // if user found and info is correct: log in
+      if ($data) {
 
-      // validate email then password
-      if ($_REQUEST['email'] == 'Mike@aol.com') {
-
-        if ($_REQUEST['password'] == 'password') {
-
-          // log in Mike
           $_SESSION['loggedin'] = 1;
           $_SESSION['currentUser'] = $_REQUEST['email'];
           header('Location:/main');
 
-        } else header('Location:/main?msg=Incorrect Password');
-
-      } else if ($_REQUEST['email'] == 'Joe@aol.com') {
-
-        if ($_REQUEST['password'] == 'password') {
-
-          // log in Joe
-          $_SESSION['loggedin'] = 1;
-          $_SESSION['currentUser'] = $_REQUEST['email'];
-          header('Location:/main');
-
-        } else header('Location:/main?msg=Incorrect Password');
-        
       } else header('Location:/main?msg=Bad Login');
     }
   }
 
   public function logout() {
 
+    // clear session variables and go to Main
     session_destroy();
     header('Location:/main');
   }

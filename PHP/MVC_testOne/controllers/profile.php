@@ -24,14 +24,8 @@ class Profile extends AppController {
 
       // validate email
       if (
-        $_SESSION['currentUser'] == 'Mike@aol.com' &&
+        $_SESSION['currentUser'] == 'mike@aol.com' &&
         $email == 'Mike@aol.com') {
-
-          echo $description;
-
-      } else if (
-        $_SESSION['currentUser'] == 'Joe@aol.com' &&
-        $email == 'Joe@aol.com') {
 
           echo $description;
       }

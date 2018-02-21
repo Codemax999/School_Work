@@ -5,3 +5,7 @@
   <h5>Super Awesome Footer</h5>
 </div>
 
+
+<!-- Closing page -->
+</body>
+</html>

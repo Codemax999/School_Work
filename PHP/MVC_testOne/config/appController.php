@@ -4,7 +4,8 @@ class AppController {
 
   public function __construct($urlPathParts, $config) {
 
-    // db information
+    // db connection & Url Parameters
+    $this->db = new PDO("mysql:dbname={$config['dbname']};", $config['dbuser'], $config['dbpass']);
     $this->urlPathParts = $urlPathParts;
 
     if ($urlPathParts[0]) {
@@ -42,10 +43,11 @@ class AppController {
     require_once "./views/{$page}.php";
   }
 
-  public function getModel() {
+  public function getModel($page) {
 
-    // add this later
-    // get then pass data to that page (view)
+    require_once "./models/{$page}.php";
+    $model = new $page($this);
+    return $model;
   }
 }
 

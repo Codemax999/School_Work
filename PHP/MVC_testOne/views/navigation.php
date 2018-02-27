@@ -38,6 +38,9 @@
         <li <?=@$data['pagename'] == 'about' ? "class='active'": ''?>>
           <a class='nav-link' href='/about'>About</a>
         </li>
+        <li <?=@$data['pagename'] == 'api' ? "class='active'": ''?>>
+          <a class='nav-link' href='/api/showApi'>Api</a>
+        </li>
         <li <?=@$data['pagename'] == 'Contact' ? "class='active'": ''?>>
           <a class='nav-link' href='/main/contact'>Contact</a>
         </li>
